@@ -31,5 +31,11 @@ angular.module("dgApp")
       $scope.toggleStatusForm();
     };
 
+    function testEndpoint(){
+          $http.get('/greeting').then(function(response){
+           console.log('RESPONSE => ', response);
+       });
+    };
+
     refresh();
 }]);
