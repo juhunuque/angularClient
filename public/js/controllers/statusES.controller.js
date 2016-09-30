@@ -1,12 +1,11 @@
 angular.module("dgApp")
 
 .controller('StatusESCtrl',['$scope','$http',function($scope, $http){
-    console.log('StatusESCtrl Init...');
 
     function refresh(){
       $scope.title = '';
+      $scope.body = '';
       $scope.isStatusFormActive = false;
-      console.log('Refresh');
     };
 
     $scope.toggleStatusForm = function(){
@@ -17,12 +16,21 @@ angular.module("dgApp")
       switch (opt) {
           case 0:
               $scope.title = 'Root endpoint result';
+              if(!$scope.isStatusFormActive){
+                makeRequest('');
+              }
               break;
           case 1:
               $scope.title = 'Status endpoint result';
+              if(!$scope.isStatusFormActive){
+                makeRequest('status');
+              }
               break;
           case 2:
               $scope.title = 'Healthcheck endpoint result';
+              if(!$scope.isStatusFormActive){
+                makeRequest('healthcheck');
+              }
               break;
           default:
               console.log('Error executing endpoint');

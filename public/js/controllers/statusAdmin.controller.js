@@ -1,13 +1,11 @@
 angular.module("dgApp")
 
 .controller('StatusAdminCtrl',['$scope','$http',function($scope, $http){
-    console.log('StatusAdminCtrl Init...');
 
     function refresh(){
       $scope.title = '';
       $scope.body = '';
       $scope.isStatusFormActive = false;
-      console.log('Refresh');
     };
 
     $scope.toggleStatusForm = function(){
