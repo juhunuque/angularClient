@@ -1,0 +1,33 @@
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.containerLimits{
+  padding: 1%;
+}
+
+.menu-logo{
+    text-align: center;
+    font-size: 8px;
+}
+
+.ng-hide-add{
+    animation:0.5s bounceOut ease;
+}
+
+.ng-hide-remove{
+    animation:0.5s bounceIn ease;
+}

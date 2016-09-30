@@ -1,0 +1,23 @@
+{
+  "name": "dgTest",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Julio N <juhunuque@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "materialize": "^0.97.7",
+    "angular": "~1.4.9",
+    "angular-route": "~1.4.9"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "package.json",
+    "src"
+  ]
+}

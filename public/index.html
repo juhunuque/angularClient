@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>DigitalGlobe - Event Service Administrator</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./bower_components/materialize/dist/css/materialize.min.css">
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel="icon" type="image/x-icon" href="./images/dg-favicon.ico" />
+</head>
+<body ng-app="dgApp">
+    <header>
+        <ul id="dropdownStatus" class="dropdown-content">
+          <li><a href="#/statusES">Event Service</a></li>
+          <li><a href="#/statusCP">Consumer Proxy</a></li>
+          <li><a href="#/statusMonitor">Monitor</a></li>
+          <li><a href="#/statusAdmin">Administrator</a></li>
+        </ul>
+      <nav style="background-color: #003A5E;" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#/home" class="brand-logo" style="margin-top: -2%">
+                <img src="./images/dg-logo.svg"  width="140" height="100"/>
+            </a>
+          <ul class="right hide-on-med-and-down">
+              <li><a href="#/home">Home</a></li>
+              <li>
+                  <a class="dropdown-button" href="#!" data-beloworigin="true" data-hover="true"
+                      data-constrainwidth="false" data-activates="dropdownStatus">
+                      Status<i class="material-icons right">arrow_drop_down</i>
+                  </a>
+              </li>
+          </ul>
+
+          <ul id="nav-mobile" class="side-nav">
+            <li><a href="#/home">Home</a></li>
+
+          </ul>
+          <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+          <div style="margin-top:3%;">
+              <div ng-view></div>
+          </div>
+    </main>
+    <br><br>
+
+    <footer class="page-footer" style="background-color: #333333; color: #FFF;">
+      <div class="container">
+          <span>&copy; DigitalGlobe - Team Arenal</span>
+      </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="./bower_components/materialize/dist/js/materialize.min.js"></script>
+  <script src="./bower_components/angular/angular.min.js"></script>
+  <script src="./bower_components/angular-route/angular-route.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers/home.controller.js"></script>
+  <script src="js/controllers/statusES.controller.js"></script>
+  </body>
+</html>
