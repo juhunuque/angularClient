@@ -3,13 +3,17 @@ angular.module("dgApp")
 .controller('StatusAdminCtrl',['$scope','$http',function($scope, $http){
 
     function refresh(){
-      $scope.title = '';
-      $scope.body = '';
+      $scope.title = 'Loading';
+      $scope.body = 'Loading';
       $scope.isStatusFormActive = false;
     };
 
     $scope.toggleStatusForm = function(){
       $scope.isStatusFormActive = !$scope.isStatusFormActive;
+
+      if(!$scope.isStatusFormActive){
+        refresh();
+      }
     };
 
     $scope.executeEndpoint = function(opt){

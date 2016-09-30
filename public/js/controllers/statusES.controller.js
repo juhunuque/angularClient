@@ -10,6 +10,10 @@ angular.module("dgApp")
 
     $scope.toggleStatusForm = function(){
       $scope.isStatusFormActive = !$scope.isStatusFormActive;
+
+      if(!$scope.isStatusFormActive){
+        refresh();
+      }
     };
 
     $scope.executeEndpoint = function(opt){
