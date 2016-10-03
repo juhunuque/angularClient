@@ -1,24 +1,14 @@
 {
-  "name": "dgTest",
+  "name": "event-service-administration",
   "description": "",
   "main": "",
-  "authors": [
-    "Julio N <juhunuque@gmail.com>"
-  ],
   "license": "MIT",
   "homepage": "",
   "dependencies": {
     "materialize": "^0.97.7",
     "angular": "~1.4.9",
     "angular-route": "~1.4.9",
-    "angular-animate": "^1.5.8"
-  },
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "package.json",
-    "src"
-  ]
+    "angular-animate": "^1.5.8",
+    "angular-ui-notification": "^0.2.0"
+  }
 }

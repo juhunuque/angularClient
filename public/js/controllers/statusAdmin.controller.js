@@ -1,6 +1,6 @@
 angular.module("dgApp")
 
-.controller('StatusAdminCtrl',['$scope','$http',function($scope, $http){
+.controller('StatusAdminCtrl',['$scope','$http','Notification', function($scope, $http, Notification){
 
     function refresh(){
       $scope.title = 'Loading';
@@ -46,6 +46,9 @@ angular.module("dgApp")
     function makeRequest(endpoint){
           $http.get('/' + endpoint).then(function(response){
            $scope.body = response.data;
+       }, function(error){
+         Notification.error({title:'Error', message:'Check the console and try again.'});
+         console.error('ERROR => ' + JSON.stringify(error.data));
        });
     };
 

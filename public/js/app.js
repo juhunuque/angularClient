@@ -1,4 +1,4 @@
-var app = angular.module('dgApp',['ngRoute','ngAnimate']);
+var app = angular.module('dgApp',['ngRoute','ngAnimate','ui-notification']);
 
 app.config(['$routeProvider',function($routeProvider){
 
