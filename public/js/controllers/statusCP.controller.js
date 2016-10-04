@@ -1,6 +1,6 @@
 angular.module("dgApp")
 
-.controller('StatusESCtrl',['$scope','$http','$dataDg', 'Notification',function($scope, $http, $dataDg, Notification){
+.controller('StatusCPCtrl',['$scope','$http','$dataDg', 'Notification',function($scope, $http, $dataDg, Notification){
 
     var configs = {};
 
@@ -47,7 +47,7 @@ angular.module("dgApp")
     };
 
     function makeRequest(endpoint){
-       $http.get('/' + configs.eventService + endpoint).then(function(response){
+       $http.get('/' + configs.eventServiceConsumerProxy + endpoint).then(function(response){
         $scope.body = response.data;
       }, function(error){
         Notification.error({title:'Error', message:'Check the console and try again.'});

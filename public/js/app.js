@@ -15,6 +15,14 @@ app.config(['$routeProvider',function($routeProvider){
     templateUrl: 'js/html/statusAdmin.view.html',
     controller: 'StatusAdminCtrl'
 })
+.when('/statusCP',{
+    templateUrl: 'js/html/statusCP.view.html',
+    controller: 'StatusCPCtrl'
+})
+.when('/statusMonitor',{
+    templateUrl: 'js/html/statusMonitor.view.html',
+    controller: 'StatusMonitorCtrl'
+})
 .otherwise({redirectTo: 'home'})
 }
 ]);
