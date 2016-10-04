@@ -1,25 +1,42 @@
 angular.module('dgApp')
-.factory('$dataDg', function($http){
+.factory('$dataDg', function(){
   var configs = {};
+  var token = {};
 
   var getConfig = function(){
-    if(angular.equals({}, configs)){
-      requestConfig();
+    return configs;
+  };
+
+  var getToken = function(){
+    if(angular.equals({}, token)){
+      return '';
     }
     return configs;
   };
 
-  var requestConfig = function(){
-    $http.get('/config').then(function(response){
-     configs = response.data;
-   }, function(error){
-     console.error('ERROR GETTING CONFIGS => ' + JSON.stringify(error.data));
-   });
 
+  var setToken = function(token){
+    token = this.token;
+  };
+
+  var setConfigs = function(config){
+    configs = this.config;
   };
 
   return{
     getConfig: getConfig,
-    requestConfig: requestConfig
+    setToken: setToken,
+    setConfigs: setConfigs,
+    getToken: getToken
   }
+})
+
+.factory('authInterceptor', function($dataDg) {
+return {
+    request: function(config) {
+      config.headers = config.headers || {};
+      config.headers.Authorization = 'Bearer '+$dataDg.getToken();
+      return config;
+    }
+  };
 })
