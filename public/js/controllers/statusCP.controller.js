@@ -3,7 +3,6 @@ angular.module("dgApp")
 .controller('StatusCPCtrl',['$scope','$http','$dataDg', 'Notification',function($scope, $http, $dataDg, Notification){
 
     var configs = {};
-
     function refresh(){
       $scope.title = '';
       $scope.body = '';
@@ -24,19 +23,19 @@ angular.module("dgApp")
           case 0:
               $scope.title = 'Root endpoint result';
               if(!$scope.isStatusFormActive){
-                makeRequest('');
+                makeRequest('/getrootinfo');
               }
               break;
           case 1:
               $scope.title = 'Status endpoint result';
               if(!$scope.isStatusFormActive){
-                makeRequest('status');
+                makeRequest('/getstatusinfo');
               }
               break;
           case 2:
               $scope.title = 'Healthcheck endpoint result';
               if(!$scope.isStatusFormActive){
-                makeRequest('healthcheck');
+                makeRequest('/gethealthcheckinfo');
               }
               break;
           default:
@@ -47,12 +46,14 @@ angular.module("dgApp")
     };
 
     function makeRequest(endpoint){
-       $http.get('/' + configs.eventServiceConsumerProxy + endpoint).then(function(response){
-        $scope.body = response.data;
-      }, function(error){
-        Notification.error({title:'Error', message:'Check the console and try again.'});
-        console.error('ERROR => ' + JSON.stringify(error.data));
-      });
+        $http.post(endpoint,{
+        'url': configs.eventServiceConsumerProxy
+        }).then(function(response){
+                $scope.body = response.data;
+              }, function(error){
+                Notification.error({title:'Error', message:'Check the console and try again.'});
+                console.error('ERROR => ' + JSON.stringify(error.data));
+              });
     };
 
     refresh();

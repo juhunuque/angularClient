@@ -2,7 +2,6 @@ var app = angular.module('dgApp',['ngRoute','ngAnimate','ui-notification']);
 
 app.config(['$routeProvider', '$httpProvider',function($routeProvider, $httpProvider){
 
-  $httpProvider.interceptors.push('authInterceptor');
 
   $routeProvider
 .when('/home',{
@@ -31,18 +30,11 @@ app.config(['$routeProvider', '$httpProvider',function($routeProvider, $httpProv
 
 app.run(function ($rootScope, $location, $http, $dataDg) {
   $rootScope.$on('$routeChangeStart', function(event, next, current) {
-      // $dataDg.requestConfig();
-      // $dataDg.requestToken();
-        $http.get('/gettoken').then(function(response){
-          $dataDg.setToken(response.data)
-       }, function(error){
-         console.error('ERROR GETTING TOKEN => ' + JSON.stringify(error.data));
-       });
-
        $http.get('/config').then(function(response){
-        $dataDg.setConfigs(response.data)
+        $dataDg.setConfigs(response.data);
       }, function(error){
         console.error('ERROR GETTING CONFIGS => ' + JSON.stringify(error.data));
       });
     });
+
   });
