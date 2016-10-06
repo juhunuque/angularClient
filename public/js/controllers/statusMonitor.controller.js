@@ -23,19 +23,19 @@ angular.module("dgApp")
               case 0:
                   $scope.title = 'Root endpoint result';
                   if(!$scope.isStatusFormActive){
-                    makeRequest('/getrootinfo');
+                    makeRequest('');
                   }
                   break;
               case 1:
                   $scope.title = 'Status endpoint result';
                   if(!$scope.isStatusFormActive){
-                    makeRequest('/getstatusinfo');
+                    makeRequest('/status');
                   }
                   break;
               case 2:
                   $scope.title = 'Healthcheck endpoint result';
                   if(!$scope.isStatusFormActive){
-                    makeRequest('/gethealthcheckinfo');
+                    makeRequest('/healthcheck');
                   }
                   break;
               default:
@@ -46,8 +46,8 @@ angular.module("dgApp")
         };
 
         function makeRequest(endpoint){
-            $http.post(endpoint,{
-            'url': configs.eventServiceMonitor
+            $http.post('/routeget',{
+            'url': configs.eventService + endpoint
             }).then(function(response){
                     $scope.body = response.data;
                   }, function(error){

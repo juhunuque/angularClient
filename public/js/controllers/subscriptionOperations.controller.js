@@ -20,7 +20,7 @@ angular.module("dgApp")
             Notification.error({title:'Error getting subscriptions', message:'Check the console and try again.'});
             console.error('ERROR => ' + JSON.stringify(error.data));
           });
-  }
+  };
 
   $scope.delete = function(subscription){
     var subscriptionId = getSubscriptionId(subscription);
@@ -32,10 +32,10 @@ angular.module("dgApp")
      Notification.error({title:'Error', message:'Check the console and try again.'});
      console.error('ERROR => ' + JSON.stringify(error.data));
    });
-  }
+ };
 
-  $scope.getSubscriptionId(subscription){
+  $scope.getSubscriptionId = function(subscription){
     return 1;
-  }
+  };
 
 }]);
