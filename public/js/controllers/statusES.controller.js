@@ -46,7 +46,7 @@ angular.module("dgApp")
         };
 
         function makeRequest(endpoint){
-            $http.post('/governance',{
+            $http.post('/routeget',{
             'url': configs.eventService + endpoint
             }).then(function(response){
                     $scope.body = response.data;
