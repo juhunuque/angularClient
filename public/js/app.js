@@ -1,4 +1,4 @@
-var app = angular.module('dgApp',['ngRoute','ngAnimate','ui-notification']);
+var app = angular.module('dgApp',['ngRoute','ngAnimate','ui-notification', 'datatables']);
 
 app.config(['$routeProvider', '$httpProvider',function($routeProvider, $httpProvider){
 
@@ -23,6 +23,14 @@ app.config(['$routeProvider', '$httpProvider',function($routeProvider, $httpProv
 .when('/statusMonitor',{
     templateUrl: 'js/html/statusMonitor.view.html',
     controller: 'StatusMonitorCtrl'
+})
+.when('/amq',{
+    templateUrl: 'js/html/amqOperations.view.html',
+    controller: 'AmqOperationsCtrl'
+})
+.when('/subscription',{
+    templateUrl: 'js/html/subscriptionOperations.view.html',
+    controller: 'AmqOperationsCtrl'
 })
 .otherwise({redirectTo: 'home'})
 }
