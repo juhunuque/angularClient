@@ -23,7 +23,7 @@
         <tbody>
             <tr ng-repeat="subscription in subscriptions">
                 <td>{{$index + 1}}</td>
-                <td>1234</td>
+                <td>{{getSubscriptionId(subscription._links.self.href)}}</td>
                 <td>{{subscription.eventSubscription}}</td>
                 <td>{{subscription.name}}</td>
                 <td>{{subscription.deliveryMethod.endpoint}}</td>

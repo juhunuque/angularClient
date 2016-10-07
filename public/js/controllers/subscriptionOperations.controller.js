@@ -42,7 +42,8 @@ angular.module("dgApp")
      };
 
   $scope.getSubscriptionId = function(subscription){
-    return 1;
+    var split = subscription.split("/");
+    return split[split.length - 1];
   };
 
   $scope.refresh();
