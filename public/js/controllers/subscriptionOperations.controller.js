@@ -2,39 +2,48 @@ angular.module("dgApp")
 
 .controller('SubscriptionOperationsCtrl',['$scope','$http', 'DTOptionsBuilder', 'Notification', '$dataDg', function($scope, $http, DTOptionsBuilder, Notification, $dataDg){
 
-  // DataTables configurable options
+  var configs = {};
+  $scope.tableMsg = "Loading subscriptions";
+
   $scope.dtOptions = DTOptionsBuilder.newOptions()
       .withDisplayLength(10)
       .withOption('bLengthChange', false)
       .withOption('scrollY', "500px")
       .withOption('scrollCollapse', true)
+      .withOption('oLanguage', {"sEmptyTable": $scope.tableMsg })
       .withOption('autoWidth', true);
 
-  var configs = {};
 
 
   $scope.refresh = function(){
     configs = $dataDg.getConfig();
+    $scope.subscriptions = {};
+    $scope.tableMsg = "Loading subscriptions";
 
     $http.post('/routeget',{
     'url': configs.eventServiceConsumerProxy + '/subscriptions'
     }).then(function(response){
             $scope.subscriptions = response.data._embedded.subscriptions;
-            console.log("SUBSCRIPTIONS => " + JSON.stringify($scope.subscriptions));
             Notification.success({title:'Success', message:'Subscriptions loaded.'});
+            $scope.tableMsg = "No data available";
           }, function(error){
             Notification.error({title:'Error getting subscriptions', message:'Check the console and try again.'});
+            $scope.tableMsg = "Error getting subscriptions";
             console.error('ERROR => ' + JSON.stringify(error.data));
           });
   };
 
 
   $scope.delete = function(subscription){
-        var subscriptionId = getSubscriptionId(subscription);
+        var subscriptionId = $scope.getSubscriptionId(subscription._links.self.href);
         $http.post('/routedelete',{
           'url': configs.eventServiceConsumerProxy + '/subscriptions/' + subscriptionId
         }).then(function(response){
-         Notification.success({title:'Success', message:'Subscription removed.'});
+            var i = $scope.subscriptions.indexOf(subscription);
+            if(i != -1) {
+                $scope.subscriptions.splice(i, 1);
+            }
+            Notification.success({title:'Success', message:'Subscription removed.'});
        }, function(error){
          Notification.error({title:'Error', message:'Check the console and try again.'});
          console.error('ERROR => ' + JSON.stringify(error.data));
