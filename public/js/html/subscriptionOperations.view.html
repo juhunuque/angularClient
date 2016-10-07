@@ -8,8 +8,8 @@
   <h3>Subscriptions</h3>
 </div>
 
-<div class="container z-depth-1 containerLimits">
-  <table datatable="ng" dt-options="dtOptions">
+<div class="containerLimits">
+  <table datatable="ng" dt-options="dtOptions" width="100%">
         <thead>
             <tr>
                 <th>#</th>
@@ -27,7 +27,7 @@
                 <td>{{subscription.eventSubscription}}</td>
                 <td>{{subscription.name}}</td>
                 <td>{{subscription.deliveryMethod.endpoint}}</td>
-                <td><a ng-click="delete(subscription)" href=""><i class="material-icons left">delete_forever</i></a></td>
+                <td><a ng-click="delete(subscription)" href="">Delete</a></td>
             </tr>
         </tbody>
     </table>

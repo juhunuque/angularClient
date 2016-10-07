@@ -6,6 +6,8 @@ angular.module("dgApp")
   $scope.dtOptions = DTOptionsBuilder.newOptions()
       .withDisplayLength(10)
       .withOption('bLengthChange', false)
+      .withOption('scrollY', "500px")
+      .withOption('scrollCollapse', true)
       .withOption('autoWidth', true);
 
   var configs = {};
