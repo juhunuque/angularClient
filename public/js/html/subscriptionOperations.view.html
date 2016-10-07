@@ -23,11 +23,11 @@
         <tbody>
             <tr ng-repeat="subscription in subscriptions">
                 <td>{{$index + 1}}</td>
-                <td>{{subscription.name}}</td>
+                <td>1234</td>
                 <td>{{subscription.eventSubscription}}</td>
                 <td>{{subscription.name}}</td>
                 <td>{{subscription.deliveryMethod.endpoint}}</td>
-                <td><a ng-click="delete(subscription)"><i class="material-icons left">delete_forever</i></a></td>
+                <td><a ng-click="delete(subscription)" href=""><i class="material-icons left">delete_forever</i></a></td>
             </tr>
         </tbody>
     </table>

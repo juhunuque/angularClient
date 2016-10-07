@@ -30,7 +30,7 @@ app.config(['$routeProvider', '$httpProvider',function($routeProvider, $httpProv
 })
 .when('/subscription',{
     templateUrl: 'js/html/subscriptionOperations.view.html',
-    controller: 'AmqOperationsCtrl'
+    controller: 'SubscriptionOperationsCtrl'
 })
 .otherwise({redirectTo: 'home'})
 }

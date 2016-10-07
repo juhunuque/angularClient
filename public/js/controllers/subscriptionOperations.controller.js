@@ -1,6 +1,6 @@
 angular.module("dgApp")
 
-.controller('SubscriptionOperationsCtrl',['$scope','$http', 'DTOptionsBuilder', 'Notification', function($scope, $http, DTOptionsBuilder, Notification){
+.controller('SubscriptionOperationsCtrl',['$scope','$http', 'DTOptionsBuilder', 'Notification', '$dataDg', function($scope, $http, DTOptionsBuilder, Notification, $dataDg){
 
   // DataTables configurable options
   $scope.dtOptions = DTOptionsBuilder.newOptions()
@@ -9,33 +9,40 @@ angular.module("dgApp")
       .withOption('autoWidth', true);
 
   var configs = {};
+
+
   $scope.refresh = function(){
     configs = $dataDg.getConfig();
 
     $http.post('/routeget',{
     'url': configs.eventServiceConsumerProxy + '/subscriptions'
     }).then(function(response){
-            $scope.subscriptions = response.data;
+            $scope.subscriptions = response.data._embedded.subscriptions;
+            console.log("SUBSCRIPTIONS => " + JSON.stringify($scope.subscriptions));
+            Notification.success({title:'Success', message:'Subscriptions loaded.'});
           }, function(error){
             Notification.error({title:'Error getting subscriptions', message:'Check the console and try again.'});
             console.error('ERROR => ' + JSON.stringify(error.data));
           });
   };
 
+
   $scope.delete = function(subscription){
-    var subscriptionId = getSubscriptionId(subscription);
-    $http.post('/routedelete',{
-      'url': configs.eventServiceConsumerProxy + '/subscriptions/' + subscriptionId
-    }).then(function(response){
-     Notification.success({title:'Success', message:'Subscription removed.'});
-   }, function(error){
-     Notification.error({title:'Error', message:'Check the console and try again.'});
-     console.error('ERROR => ' + JSON.stringify(error.data));
-   });
- };
+        var subscriptionId = getSubscriptionId(subscription);
+        $http.post('/routedelete',{
+          'url': configs.eventServiceConsumerProxy + '/subscriptions/' + subscriptionId
+        }).then(function(response){
+         Notification.success({title:'Success', message:'Subscription removed.'});
+       }, function(error){
+         Notification.error({title:'Error', message:'Check the console and try again.'});
+         console.error('ERROR => ' + JSON.stringify(error.data));
+       });
+     };
 
   $scope.getSubscriptionId = function(subscription){
     return 1;
   };
+
+  $scope.refresh();
 
 }]);
