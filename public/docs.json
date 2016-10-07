@@ -1,0 +1,4710 @@
+
+
+[
+  {
+    "name": "Order Status Update internal-order-service-ssingh.apps.cfdev1.ux.dg.local",
+    "eventSubscription": "Inventory.Order.StatusUpdate",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/internal-order-service-ssingh.apps.cfdev1.ux.dg.local\/orders\/status"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/2280"
+      }
+    }
+  },
+  {
+    "name": "JeremysRCCSUplink",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent",
+    "eventVersionSubscription": "*",
+    "clientID": "8GBUUsGJAAZ3",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/eventjwlistner.apps.cfdev1.ux.dg.local\/event"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/2686"
+      }
+    }
+  },
+  {
+    "name": "LGMT.MCS.RCCS.TelUplinkEvent_https:\/\/localhost:7001\/event-receiver",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent",
+    "eventVersionSubscription": "*",
+    "clientID": "9lavjMAuXRi6",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/localhost:7001\/event-receiver"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52220"
+      }
+    }
+  },
+  {
+    "name": "Contact Plan Update Event to AWA dev_jtrussler",
+    "eventSubscription": "${contact.plan.event.type}",
+    "eventVersionSubscription": "*",
+    "clientID": "QqagmtcsQxwM",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/pu00infwks218:8080\/event"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52221"
+      }
+    }
+  },
+  {
+    "name": "MCS Predicted Ephemeris event to SIPS dev_tschmid_mock",
+    "eventSubscription": "MCS.PredictedEphemerisService.NewTodStpEphemeris",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXGHNVYQ1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51516"
+      }
+    }
+  },
+  {
+    "name": "IERS Event to SIPS dev_tschmid_mock",
+    "eventSubscription": "LGMT.IERS.NewIERSBulletinv",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXGHNVYQ1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51520"
+      }
+    }
+  },
+  {
+    "name": "Activated Resource Config to SIPS dev_tschmid_mock",
+    "eventSubscription": "LGMT.MCS.ConfigServer.Config.Activated.terminal-config-test.RGTAK-dev-tschmid_mock",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXGHNVYQ1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51521"
+      }
+    }
+  },
+  {
+    "name": "Contact Plan Update Event to AWA dev_rmuthuku",
+    "eventSubscription": "${contact.plan.event.type}",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/pu00infwks111:8080\/event"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52212"
+      }
+    }
+  },
+  {
+    "name": "Contact Plan Update Event to AWA dev_kgovinda",
+    "eventSubscription": "${contact.plan.event.type}",
+    "eventVersionSubscription": "*",
+    "clientID": "QqagmtcsQxwM",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/pu00infwks218:8080\/event"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52218"
+      }
+    }
+  },
+  {
+    "name": "EventTest-JWINT",
+    "eventSubscription": "LGMT.MCS.Event.In.DEVINT.Space.test",
+    "eventVersionSubscription": "*",
+    "clientID": "IzYJDjomRmgD",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "http:\/\/10.92.80.227:9210\/event"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50593"
+      }
+    }
+  },
+  {
+    "name": "IMS Mission Status event to SIPS dev_tyan",
+    "eventSubscription": "LGMT.IMS.AcquisitionGroundStateChange",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-tyan.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52365"
+      }
+    }
+  },
+  {
+    "name": "MCS Predicted Ephemeris event to SIPS dev_gweaver_int",
+    "eventSubscription": "MCS.PredictedEphemerisService.NewTodStpEphemeris",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-gweaver.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52061"
+      }
+    }
+  },
+  {
+    "name": "IMS Mission Status event to SIPS dev_gweaver_int",
+    "eventSubscription": "LGMT.IMS.AcquisitionGroundStateChange",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-gweaver.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52064"
+      }
+    }
+  },
+  {
+    "name": "Contact Plan Update Event to AWA dev_psriram",
+    "eventSubscription": "${contact.plan.event.type}",
+    "eventVersionSubscription": "*",
+    "clientID": "QqagmtcsQxwM",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/access-window-adjuster-psriram.psriram.apps.10.52.46.151.xip.io:80\/event"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52216"
+      }
+    }
+  },
+  {
+    "name": "Contact Plan Update Event to AWA dev_jtrussle",
+    "eventSubscription": "LGMT.MCS.ContactPlan.Loaded.JTDEV",
+    "eventVersionSubscription": "*",
+    "clientID": "QqagmtcsQxwM",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/access-window-adjuster-jtrussle.apps.cfdev1.ux.dg.local:443\/event"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52134"
+      }
+    }
+  },
+  {
+    "name": "MCS.TLM.newTlmAvail_https\/10.92.81.72:6000\/event_receiver",
+    "eventSubscription": "MCS.TLM.newTlmAvail",
+    "eventVersionSubscription": "*",
+    "clientID": "jrd8P4xG6UBY",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https\/10.92.81.72:6000\/event_receiver"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50576"
+      }
+    }
+  },
+  {
+    "name": "Order Status Update hmullins",
+    "eventSubscription": "Inventory.Order.StatusUpdate",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "http:\/\/pu00infwks107:8080\/orders\/status"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51472"
+      }
+    }
+  },
+  {
+    "name": "LG Test Event Subscription",
+    "eventSubscription": "LG.Test.Event.Subscription",
+    "eventVersionSubscription": "*",
+    "clientID": "WOOMDx5v1q33",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/lgtest.digitalglobe.com\/test"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/675"
+      }
+    }
+  },
+  {
+    "name": "command-generator_tms-revoke",
+    "eventSubscription": "LGMT.MCS.TelMgmtService.TelRevoked",
+    "eventVersionSubscription": "*",
+    "clientID": "9lavjMAuXRi6",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/command-generator-service.devint.apps.cfdev1.ux.dg.local\/event_receiver"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/3815"
+      }
+    }
+  },
+  {
+    "name": "LGMT.MCS.TelMgmtService.TelRevoked_https:\/\/lpm.devint.apps.cfdev1.ux.dg.local\/revoked-tel-events",
+    "eventSubscription": "LGMT.MCS.TelMgmtService.TelRevoked",
+    "eventVersionSubscription": "*",
+    "clientID": "79viwO4it6jP",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/lpm.devint.apps.cfdev1.ux.dg.local\/revoked-tel-events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/2722"
+      }
+    }
+  },
+  {
+    "name": "My TWS Subscription",
+    "eventSubscription": "LGMT.MCS.TelMgmtService.TaskWindowUpdate",
+    "eventVersionSubscription": "*",
+    "clientID": "9lavjMAuXRi6",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/10.92.80.227:9210\/event"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52084"
+      }
+    }
+  },
+  {
+    "name": "newTelemAvail_devint_TTTC_GENERATION_SERVICE",
+    "eventSubscription": "newTelemAvail",
+    "eventVersionSubscription": "*",
+    "clientID": "v_iU2tVR7s43",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/ttlc-generation-service.devint.apps.cfdev1.ux.dg.local\/event"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52217"
+      }
+    }
+  },
+  {
+    "name": "MCS Predicted Ephemeris event to SIPS dev_talcorn",
+    "eventSubscription": "MCS.PredictedEphemerisService.NewTodStpEphemeris",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-talcorn.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52467"
+      }
+    }
+  },
+  {
+    "name": "LGMT.MCS.RCCS.TelUplinkEvent_https:\/\/10.92.80.227:7000\/event-receiver",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent",
+    "eventVersionSubscription": "*",
+    "clientID": "lchewku-Drvk",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/10.92.80.227:7000\/event-receiver"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52089"
+      }
+    }
+  },
+  {
+    "name": "IERS Event to SIPS dev_talcorn",
+    "eventSubscription": "LGMT.IERS.NewIERSBulletinv",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-talcorn.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52471"
+      }
+    }
+  },
+  {
+    "name": "LGMT.MCS.RCCS.TelUplinkEvent_https:\/\/0.0.0.0:7000\/event-receiver",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent",
+    "eventVersionSubscription": "*",
+    "clientID": "9lavjMAuXRi6",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/0.0.0.0:7000\/event-receiver"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52091"
+      }
+    }
+  },
+  {
+    "name": "Test subscription 2222",
+    "eventSubscription": "test_event",
+    "eventVersionSubscription": "1.0",
+    "clientID": "k1UvCrKkTnW8",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/10.92.80.187:9090\/consumeevent1"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52094"
+      }
+    }
+  },
+  {
+    "name": "LGMT.MCS.ContactPlan.Loaded_https:\/\/lpm.devint.apps.cfdev1.ux.dg.local\/contact-plans-updated",
+    "eventSubscription": "LGMT.MCS.ContactPlan.Loaded",
+    "eventVersionSubscription": "*",
+    "clientID": "79viwO4it6jP",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/lpm.devint.apps.cfdev1.ux.dg.local\/contact-plans-updated"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/10636"
+      }
+    }
+  },
+  {
+    "name": "test_subscription_1${counter}",
+    "eventSubscription": "test_event_1",
+    "eventVersionSubscription": "*",
+    "clientID": "ErSi5qRMe2E-",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/dxh089tw1.digitalglobe.com\/RequestLogger\/event"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/2650"
+      }
+    }
+  },
+  {
+    "name": "Order Status Update bwhitney1.novalocal",
+    "eventSubscription": "Inventory.Order.StatusUpdate",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "http:\/\/bwhitney1.novalocal:8080\/orders\/status"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/2281"
+      }
+    }
+  },
+  {
+    "name": "Order Status Update internal-order-service-mpetcu.apps.cfdev1.ux.dg.local",
+    "eventSubscription": "Inventory.Order.StatusUpdate",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/internal-order-service-mpetcu.apps.cfdev1.ux.dg.local\/orders\/status"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/2434"
+      }
+    }
+  },
+  {
+    "name": "Java Canary",
+    "eventSubscription": "JAVA-CANARY.EVENT.ACTIVITY",
+    "eventVersionSubscription": "*",
+    "clientID": "qPP_fjVtoQfO",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "java-canary.devint.apps.cfdev1.ux.dg.local\/events\/receive"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52085"
+      }
+    }
+  },
+  {
+    "name": "fileservices-server activity subscription",
+    "eventSubscription": "FILESERVICES-SERVER.EVENT.ACTIVITY",
+    "eventVersionSubscription": "*",
+    "clientID": "9Xd3z5d5dTWo",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "http:\/\/fileservices-server.devint.apps.cfdev1.ux.dg.local\/events\/receive"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52884"
+      }
+    }
+  },
+  {
+    "name": "MCS Contact Plan event to SIPS dev_tschmid_mock",
+    "eventSubscription": "LGMT.MCS.ContactPlan.Loaded",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXGHNVYQ1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51517"
+      }
+    }
+  },
+  {
+    "name": "MCS.TelemetryService.newCadAvail_https\/10.92.81.72:6000\/event_receiver",
+    "eventSubscription": "MCS.TelemetryService.newCadAvail",
+    "eventVersionSubscription": "*",
+    "clientID": "jrd8P4xG6UBY",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https\/10.92.81.72:6000\/event_receiver"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50577"
+      }
+    }
+  },
+  {
+    "name": "New TTLC Subscription",
+    "eventSubscription": "LGMT.MCS.Ancillary.NewTtlc",
+    "eventVersionSubscription": "*",
+    "clientID": "1njlutayseZ1",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/pu00infwks066:10000\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51943"
+      }
+    }
+  },
+  {
+    "name": "IMS Mission Status event to SIPS dev_tschmid_mock",
+    "eventSubscription": "LGMT.IMS.AcquisitionGroundStateChange",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXGHNVYQ1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51519"
+      }
+    }
+  },
+  {
+    "name": "NewTelJWIP",
+    "eventSubscription": "LGMT.MCS.TelMgmtService.NewTel",
+    "eventVersionSubscription": "*",
+    "clientID": "IzYJDjomRmgD",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "http:\/\/10.92.80.227:9210\/event"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50580"
+      }
+    }
+  },
+  {
+    "name": "MCS.TLM.newTlmAvail_https\/10.52.46.64:6000\/event_receiver",
+    "eventSubscription": "MCS.TLM.newTlmAvail",
+    "eventVersionSubscription": "*",
+    "clientID": "jrd8P4xG6UBY",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https\/10.52.46.64:6000\/event_receiver"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/10646"
+      }
+    }
+  },
+  {
+    "name": "NewLPMJWIP",
+    "eventSubscription": "LGMT.MCS.LoadPackageManager.Update",
+    "eventVersionSubscription": "*",
+    "clientID": "IzYJDjomRmgD",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "http:\/\/10.92.80.227:9210\/event"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50581"
+      }
+    }
+  },
+  {
+    "name": "TelRevoked-Failed-JWIP",
+    "eventSubscription": "LGMT.MCS.TelMgmtService.TelRevoked",
+    "eventVersionSubscription": "*",
+    "clientID": "IzYJDjomRmgD",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "http:\/\/10.92.80.227:9210\/event"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50583"
+      }
+    }
+  },
+  {
+    "name": "LGMT.MCS.RCCS.TelUplinkEvent_https:\/\/tel-mgmt-service.devint.apps.cfdev1.ux.dg.local\/event-receiver",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent",
+    "eventVersionSubscription": "*",
+    "clientID": "lchewku-Drvk",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/tel-mgmt-service.devint.apps.cfdev1.ux.dg.local\/event-receiver"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/2750"
+      }
+    }
+  },
+  {
+    "name": "Order Status Update internal-order-service-mwaters.apps.cfdev1.ux.dg.local",
+    "eventSubscription": "Inventory.Order.StatusUpdate",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/internal-order-service-mwaters.apps.cfdev1.ux.dg.local\/orders\/status"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50590"
+      }
+    }
+  },
+  {
+    "name": "MCS Predicted Ephemeris event to SIPS dev",
+    "eventSubscription": "MCS.PredictedEphemerisService.NewTodStpEphemeris.KRDEV",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-kreine.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52093"
+      }
+    }
+  },
+  {
+    "name": "LGMT.MCS.TelMgmtService.NewTel_https:\/\/sbs.devint.apps.cfdev1.ux.dg.local\/events",
+    "eventSubscription": "LGMT.MCS.TelMgmtService.NewTel",
+    "eventVersionSubscription": "*",
+    "clientID": "hHigiD400e2V",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/sbs.devint.apps.cfdev1.ux.dg.local\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50862"
+      }
+    }
+  },
+  {
+    "name": "New Attitude Subscription",
+    "eventSubscription": "LGMT.MCS.Ancillary.NewAttitude",
+    "eventVersionSubscription": "*",
+    "clientID": "1njlutayseZ1",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/pu00infwks066:10000\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51941"
+      }
+    }
+  },
+  {
+    "name": "MCS Contact Plan event to SIPS dev_talcorn",
+    "eventSubscription": "LGMT.MCS.ContactPlan.Loaded",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-talcorn.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52468"
+      }
+    }
+  },
+  {
+    "name": "MCS Contact Plan event to SIPS dev_gweaver_int",
+    "eventSubscription": "LGMT.MCS.ContactPlan.Loaded",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-gweaver.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52062"
+      }
+    }
+  },
+  {
+    "name": "IERS Event to SIPS dev_gweaver_int",
+    "eventSubscription": "LGMT.IERS.NewIERSBulletinv",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-gweaver.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52065"
+      }
+    }
+  },
+  {
+    "name": "Activated Vehicle Config to SIPS dev_gweaver_int",
+    "eventSubscription": "ConfigServer.Config.Activated.vehicle-config-test.WV04-dev_gweaver_int",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-gweaver.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52067"
+      }
+    }
+  },
+  {
+    "name": "LGMT.MCS.RCCS.TelUplinkEvent_https:\/\/10.92.80.227:9000\/event-receiver",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent",
+    "eventVersionSubscription": "*",
+    "clientID": "lchewku-Drvk",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/10.92.80.227:9000\/event-receiver"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52090"
+      }
+    }
+  },
+  {
+    "name": "MCS Predicted Ephemeris event to SIPS dev_tschmid",
+    "eventSubscription": "MCS.PredictedEphemerisService.NewTodStpEphemeris.TSDEV",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-tschmid.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51365"
+      }
+    }
+  },
+  {
+    "name": "MCS TEL Uplink Notification event to SIPS dev_tschmid",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent.TSDEV",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-tschmid.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51367"
+      }
+    }
+  },
+  {
+    "name": "Activated Resource Config to SIPS dev_tschmid",
+    "eventSubscription": "ConfigServer.Config.Activated.terminal-config-test.RGTAK-dev",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-tschmid.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51370"
+      }
+    }
+  },
+  {
+    "name": "MCS TEL Uplink Notification event to SIPS dev_talcorn",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-talcorn.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52469"
+      }
+    }
+  },
+  {
+    "name": "Activated Resource Config to SIPS dev_talcorn",
+    "eventSubscription": "ConfigServer.Config.Activated.terminal-config-test.RGTAK-dev-talcorn",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-talcorn.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52472"
+      }
+    }
+  },
+  {
+    "name": "Order Status Update crandle1.novalocal",
+    "eventSubscription": "Inventory.Order.StatusUpdate",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "http:\/\/crandle1.novalocal:8080\/orders\/status"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/2253"
+      }
+    }
+  },
+  {
+    "name": "Order Status Update internal-order-service-bwhitney.apps.cfdev1.ux.dg.local",
+    "eventSubscription": "Inventory.Order.StatusUpdate",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/internal-order-service-bwhitney.apps.cfdev1.ux.dg.local\/orders\/status"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/2282"
+      }
+    }
+  },
+  {
+    "name": "newTelemAvail_https:\/\/ttlc-generation-service.devint.apps.cfdev1.ux.dg.local\/event",
+    "eventSubscription": "newTelemAvail",
+    "eventVersionSubscription": "*",
+    "clientID": "v_iU2tVR7s43",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/ttlc-generation-service.devint.apps.cfdev1.ux.dg.local\/event"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51027"
+      }
+    }
+  },
+  {
+    "name": "MCS Predicted service event to SIPS",
+    "eventSubscription": "MCS.PredictedEphemerisService.NewTodStpEphemeris.WBDEV",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-ddodge.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/10626"
+      }
+    }
+  },
+  {
+    "name": "MCS.TelemetryService.newCadAvail_https\/10.52.46.64:6000\/event_receiver",
+    "eventSubscription": "MCS.TelemetryService.newCadAvail",
+    "eventVersionSubscription": "*",
+    "clientID": "jrd8P4xG6UBY",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https\/10.52.46.64:6000\/event_receiver"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/10647"
+      }
+    }
+  },
+  {
+    "name": "NewCGS-Failed-JWIP",
+    "eventSubscription": "LGMT.MCS.CommandGeneratorService.ProcessingFailed",
+    "eventVersionSubscription": "*",
+    "clientID": "IzYJDjomRmgD",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "http:\/\/10.92.80.227:9210\/event"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50582"
+      }
+    }
+  },
+  {
+    "name": "NewContactPlan-JWIP",
+    "eventSubscription": "LGMT.MCS.ContactPlan.Loaded",
+    "eventVersionSubscription": "*",
+    "clientID": "IzYJDjomRmgD",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "http:\/\/10.92.80.227:9210\/event"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50584"
+      }
+    }
+  },
+  {
+    "name": "MCS TEL Uplink to SIPS",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent.WBDEV",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-ddodge.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/10628"
+      }
+    }
+  },
+  {
+    "name": "New Ephemeris Subscription",
+    "eventSubscription": "LGMT.MCS.Ancillary.NewEphemeris",
+    "eventVersionSubscription": "*",
+    "clientID": "1njlutayseZ1",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/pu00infwks066:10000\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51942"
+      }
+    }
+  },
+  {
+    "name": "IMS Mission Status event to SIPS dev_talcorn",
+    "eventSubscription": "LGMT.IMS.AcquisitionGroundStateChange",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-talcorn.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52470"
+      }
+    }
+  },
+  {
+    "name": "Activated Vehicle Config to SIPS dev_talcorn",
+    "eventSubscription": "ConfigServer.Config.Activated.vehicle-config-test.WV04-dev-talcorn",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-talcorn.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52473"
+      }
+    }
+  },
+  {
+    "name": "fileservices-server callback subscription",
+    "eventSubscription": "FILESERVICES-SERVER.EVENT.CALLBACK",
+    "eventVersionSubscription": "*",
+    "clientID": "9Xd3z5d5dTWo",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "http:\/\/fileservices-server.devint.apps.cfdev1.ux.dg.local\/events\/receive"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52885"
+      }
+    }
+  },
+  {
+    "name": "MCS TEL Uplink Notification event to SIPS ${app.environment}",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXGKDM7Y1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50741"
+      }
+    }
+  },
+  {
+    "name": "Monitor_subscription_${cf.diet}_${unique.key}",
+    "eventSubscription": "monitor_event_devint_",
+    "eventVersionSubscription": "*",
+    "clientID": "FIkFLEEa5O2s",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/event-service-monitor.devint.apps.cfdev1.ux.dg.local:443\/consumeevent"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52432"
+      }
+    }
+  },
+  {
+    "name": "MCS TEL Uplink Notification event to SIPS dev_gweaver_int",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-gweaver.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52063"
+      }
+    }
+  },
+  {
+    "name": "Activated Resource Config to SIPS dev_gweaver_int",
+    "eventSubscription": "ConfigServer.Config.Activated.terminal-config-test.RGTAK-dev_gweaver_int",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-gweaver.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52066"
+      }
+    }
+  },
+  {
+    "name": "Activated Vehicle Config to SIPS dev_tschmid",
+    "eventSubscription": "ConfigServer.Config.Activated.vehicle-config-test.WV04-dev",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-tschmid.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51371"
+      }
+    }
+  },
+  {
+    "name": "MCS TEL Uplink Notification event to SIPS dev_tschmid_mock",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXGHNVYQ1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51518"
+      }
+    }
+  },
+  {
+    "name": "Activated Vehicle Config to SIPS dev_tschmid_mock",
+    "eventSubscription": "ConfigServer.Config.Activated.vehicle-config-test.WV04-dev-tschmid_mock",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXGHNVYQ1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51522"
+      }
+    }
+  },
+  {
+    "name": "LGMT.MCS.TelMgmtService.TelRevoked_https:\/\/lpm-rwp.apps.cfdev1.ux.dg.local\/revoked-tel-events",
+    "eventSubscription": "LGMT.MCS.TelMgmtService.TelRevoked",
+    "eventVersionSubscription": "*",
+    "clientID": "79viwO4it6jP",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/lpm-rwp.apps.cfdev1.ux.dg.local\/revoked-tel-events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52232"
+      }
+    }
+  },
+  {
+    "name": "Contact Plan Update Event to AWA dev_tford",
+    "eventSubscription": "${contact.plan.event.type}",
+    "eventVersionSubscription": "*",
+    "clientID": "QqagmtcsQxwM",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/pu00infwks226:8080\/event"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52228"
+      }
+    }
+  },
+  {
+    "name": "Activated Resource Config to SIPS ${app.environment}",
+    "eventSubscription": "ConfigServer.Config.Activated.terminal-config-test.RGTAK-dev-barthur",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXGKDM7Y1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50744"
+      }
+    }
+  },
+  {
+    "name": "BoMM Image Ready Event Subscription-kgentry",
+    "eventSubscription": "LGMT.Production.Strip.EndIngest",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/bomm-kgentry.apps.cfdev1.ux.dg.local\/event\/inventory"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51618"
+      }
+    }
+  },
+  {
+    "name": "MCS Predicted Ephemeris event to SIPS dev_tyan",
+    "eventSubscription": "MCS.PredictedEphemerisService.NewTodStpEphemeris",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-tyan.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52362"
+      }
+    }
+  },
+  {
+    "name": "command-generator_tms-newtel2",
+    "eventSubscription": "LGMT.MCS.TelMgmtService.NewTel",
+    "eventVersionSubscription": "*",
+    "clientID": "qf3BfE4gqxIF",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "http:\/\/10.92.80.67:9292\/event_receiver"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/53088"
+      }
+    }
+  },
+  {
+    "name": "IMS IESR Event to SIPS",
+    "eventSubscription": "LGMT.IERS.NewIERSBulletin.WBDEVv",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-ddodge.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/10630"
+      }
+    }
+  },
+  {
+    "name": "MCS Predicted Ephemeris event to SIPS dev_rdrew",
+    "eventSubscription": "MCS.PredictedEphemerisService.NewTodStpEphemeris",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXCY20QS1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52011"
+      }
+    }
+  },
+  {
+    "name": "Order Status Update internal-order-service-crandle.apps.cfdev1.ux.dg.local",
+    "eventSubscription": "Inventory.Order.StatusUpdate",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/internal-order-service-crandle.apps.cfdev1.ux.dg.local\/orders\/status"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/2252"
+      }
+    }
+  },
+  {
+    "name": "LGMT.MCS.TelMgmtService.TelRevoked_https:\/\/lpm-rlawrenc.apps.cfdev1.ux.dg.local\/revoked-tel-events",
+    "eventSubscription": "LGMT.MCS.TelMgmtService.TelRevoked",
+    "eventVersionSubscription": "*",
+    "clientID": "kizRzg_9Q69k",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/lpm-rlawrenc.apps.cfdev1.ux.dg.local\/revoked-tel-events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/53089"
+      }
+    }
+  },
+  {
+    "name": "Order Status Update dcolon",
+    "eventSubscription": "Inventory.Order.StatusUpdate",
+    "eventVersionSubscription": "*",
+    "clientID": "k1UvCrKkTnW8",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "http:\/\/pu00infwks024:8080\/orders\/status"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51471"
+      }
+    }
+  },
+  {
+    "name": "MCS Contact Plan event to SIPS dev_tschmid",
+    "eventSubscription": "LGMT.MCS.ContactPlan.Loaded.TSDEV",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-tschmid.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51366"
+      }
+    }
+  },
+  {
+    "name": "IMS Mission Status event to SIPS dev_tschmid",
+    "eventSubscription": "LGMT.IMS.AcquisitionGroundStateChange.TSDEV",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-tschmid.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51368"
+      }
+    }
+  },
+  {
+    "name": "MCS Predicted Ephemeris event to SIPS dev_gweaver",
+    "eventSubscription": "MCS.PredictedEphemerisService.NewTodStpEphemeris",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-gweaver.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52008"
+      }
+    }
+  },
+  {
+    "name": "MCS Contact Plan event to SIPS dev_gweaver",
+    "eventSubscription": "LGMT.MCS.ContactPlan.Loaded",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-gweaver.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52009"
+      }
+    }
+  },
+  {
+    "name": "command-generator_tms-revoke2",
+    "eventSubscription": "LGMT.MCS.TelMgmtService.TelRevoked",
+    "eventVersionSubscription": "*",
+    "clientID": "qf3BfE4gqxIF",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "http:\/\/10.92.80.67:9292\/event_receiver"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/53091"
+      }
+    }
+  },
+  {
+    "name": "bomm-rgoldsworthy-image-ready-rgoldsworthy",
+    "eventSubscription": "LGMT.Production.Strip.EndIngest",
+    "eventVersionSubscription": "*",
+    "clientID": "y0I86fyG0jSY",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/bomm-rgoldsworthy.apps.cfdev1.ux.dg.local\/event\/inventory"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51535"
+      }
+    }
+  },
+  {
+    "name": "IERS Event to SIPS dev_tschmid",
+    "eventSubscription": "LGMT.IERS.NewIERSBulletin.TSDEVv",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-tschmid.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51369"
+      }
+    }
+  },
+  {
+    "name": "Contact Plan Update Event to AWA dev_agudimel",
+    "eventSubscription": "${contact.plan.event.type}",
+    "eventVersionSubscription": "*",
+    "clientID": "QqagmtcsQxwM",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/localhost:8080\/event"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52213"
+      }
+    }
+  },
+  {
+    "name": "MCS Predicted Ephemeris event to SIPS dev_kreine_int",
+    "eventSubscription": "MCS.PredictedEphemerisService.NewTodStpEphemeris",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-kreine.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52076"
+      }
+    }
+  },
+  {
+    "name": "Activated Vehicle Config to SIPS dev_kreine_int",
+    "eventSubscription": "ConfigServer.Config.Activated.vehicle-config-test.WV04-dev-kreine-int",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-kreine.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52077"
+      }
+    }
+  },
+  {
+    "name": "MCS Predicted Ephemeris event to SIPS dev_talcorn_int",
+    "eventSubscription": "MCS.PredictedEphemerisService.NewTodStpEphemeris",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-talcorn.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52449"
+      }
+    }
+  },
+  {
+    "name": "MCS TEL Uplink Notification event to SIPS dev_talcorn_int",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-talcorn.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52451"
+      }
+    }
+  },
+  {
+    "name": "LGMT.MCS.ContactPlan.Loaded_https:\/\/lpm-rwp.apps.cfdev1.ux.dg.local\/contact-plans-updated",
+    "eventSubscription": "LGMT.MCS.ContactPlan.Loaded",
+    "eventVersionSubscription": "*",
+    "clientID": "79viwO4it6jP",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/lpm-rwp.apps.cfdev1.ux.dg.local\/contact-plans-updated"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52233"
+      }
+    }
+  },
+  {
+    "name": "LG.New.Changes",
+    "eventSubscription": "LG.Test.Event.Subscription",
+    "eventVersionSubscription": "*",
+    "clientID": "AEAN4jK4zgk3",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXHTMYJQ1.digitalglobe.com:8084\/events\/receive"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/2824"
+      }
+    }
+  },
+  {
+    "name": "LG Test2 Event Subscription",
+    "eventSubscription": "LG.Test.Event.Subscription",
+    "eventVersionSubscription": "*",
+    "clientID": "AEAN4jK4zgk3",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXHTMYJQ1.digitalglobe.com:8084\/events\/receive"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/682"
+      }
+    }
+  },
+  {
+    "name": "IMS Mission Status event to SIPS ${app.environment}",
+    "eventSubscription": "LGMT.IMS.AcquisitionGroundStateChange",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXGKDM7Y1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50742"
+      }
+    }
+  },
+  {
+    "name": "BoMM Image Ready Event Subscription-devint",
+    "eventSubscription": "LGMT.Production.Strip.EndIngest",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/bomm.devint.apps.cfdev1.ux.dg.local\/event\/inventory"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52010"
+      }
+    }
+  },
+  {
+    "name": "IERS Event to SIPS ${app.environment}",
+    "eventSubscription": "LGMT.IERS.NewIERSBulletinv",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXGKDM7Y1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50743"
+      }
+    }
+  },
+  {
+    "name": "FSS callback JEFF",
+    "eventSubscription": "FILESERVICES-SERVER.EVENT.CALLBACK",
+    "eventVersionSubscription": "*",
+    "clientID": "LcfXBBaDDOza",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/10.92.81.254:8080\/events\/receive"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52780"
+      }
+    }
+  },
+  {
+    "name": "MCS Contact Plan event to SIPS",
+    "eventSubscription": "LGMT.MCS.ContactPlan.Loaded.WBDEV",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-ddodge.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/10627"
+      }
+    }
+  },
+  {
+    "name": "LGMT.MCS.RCCS.TelUplinkEvent_https:\/\/10.52.46.196:7000\/event-receiver",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent",
+    "eventVersionSubscription": "*",
+    "clientID": "9lavjMAuXRi6",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/10.52.46.196:7000\/event-receiver"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52060"
+      }
+    }
+  },
+  {
+    "name": "command-generator_tms-newtel",
+    "eventSubscription": "LGMT.MCS.TelMgmtService.NewTel",
+    "eventVersionSubscription": "*",
+    "clientID": "9lavjMAuXRi6",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/command-generator-service.devint.apps.cfdev1.ux.dg.local\/event_receiver"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/3814"
+      }
+    }
+  },
+  {
+    "name": "Stereo Pair Subscription",
+    "eventSubscription": "SAMPLE.EVENT.ACTIVITY",
+    "eventVersionSubscription": "*",
+    "clientID": "S6xesrw4zbCi",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/stereo-pairs.devint.apps.cfdev1.ux.dg.local:443\/events\/receive"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/2749"
+      }
+    }
+  },
+  {
+    "name": "Order Status Update pu00infwks041",
+    "eventSubscription": "Inventory.Order.StatusUpdate",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "http:\/\/pu00infwks041:8080\/orders\/status"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/2465"
+      }
+    }
+  },
+  {
+    "name": "MCS Contact Plan event to SIPS dev_talcorn_int",
+    "eventSubscription": "LGMT.MCS.ContactPlan.Loaded",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-talcorn.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52450"
+      }
+    }
+  },
+  {
+    "name": "Order Status Update",
+    "eventSubscription": "eventservice.subscribe-info.subscriptions.status.subscription",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "internal-order-service-crandle.apps.cfdev1.ux.dg.local\/orders\/status"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/2236"
+      }
+    }
+  },
+  {
+    "name": "IMS Mission Status event to SIPS dev_talcorn_int",
+    "eventSubscription": "LGMT.IMS.AcquisitionGroundStateChange",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-talcorn.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52452"
+      }
+    }
+  },
+  {
+    "name": "IERS Event to SIPS dev_talcorn_int",
+    "eventSubscription": "LGMT.IERS.NewIERSBulletinv",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-talcorn.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52453"
+      }
+    }
+  },
+  {
+    "name": "Activated Resource Config to SIPS",
+    "eventSubscription": "ConfigServer.Config.Activated.terminal-config-test.*",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-ddodge.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/10631"
+      }
+    }
+  },
+  {
+    "name": "SBS_LGMT.MCS.TelMgmtService.NewTel",
+    "eventSubscription": "LGMT.MCS.TelMgmtService.NewTel",
+    "eventVersionSubscription": "*",
+    "clientID": "hHigiD400e2V",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/sbs.devint.apps.cfdev1.ux.dg.local\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51372"
+      }
+    }
+  },
+  {
+    "name": "SBS_LGMT.MCS.RCCS.TelUplinkEvent",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent",
+    "eventVersionSubscription": "*",
+    "clientID": "hHigiD400e2V",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/sbs.devint.apps.cfdev1.ux.dg.local\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51373"
+      }
+    }
+  },
+  {
+    "name": "IMS Mission Status to SIPS",
+    "eventSubscription": "LGMT.IMS.AcquisitionGroundStateChange.WBDEV",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-ddodge.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/10629"
+      }
+    }
+  },
+  {
+    "name": "Activated Resource Config to SIPS dev_tyan",
+    "eventSubscription": "ConfigServer.Config.Activated.terminal-config-test.*",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-tyan.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52367"
+      }
+    }
+  },
+  {
+    "name": "LGMT.MCS.ContactPlan.Loaded_https:\/\/lpm-rlawrenc.apps.cfdev1.ux.dg.local\/contact-plans-updated",
+    "eventSubscription": "LGMT.MCS.ContactPlan.Loaded",
+    "eventVersionSubscription": "*",
+    "clientID": "kizRzg_9Q69k",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/lpm-rlawrenc.apps.cfdev1.ux.dg.local\/contact-plans-updated"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/53090"
+      }
+    }
+  },
+  {
+    "name": "MCS Predicted Ephemeris event to SIPS ${app.environment}",
+    "eventSubscription": "MCS.PredictedEphemerisService.NewTodStpEphemeris",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXGKDM7Y1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50739"
+      }
+    }
+  },
+  {
+    "name": "IPS Int-Test End Event",
+    "eventSubscription": "IPS.ImageryProductionEnd",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/10.156.133.20:1114\/CompleteEventPub"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52015"
+      }
+    }
+  },
+  {
+    "name": "BoMM Image Ready Event Subscription-mstanlis",
+    "eventSubscription": "LGMT.Production.Strip.EndIngest",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/bomm-mstanlis.apps.cfdev1.ux.dg.local\/event\/inventory"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51481"
+      }
+    }
+  },
+  {
+    "name": "IPS Int-Test Start Event",
+    "eventSubscription": "IPS.ImageryProductionStart",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/10.156.133.20:1114\/StartEventPub"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52014"
+      }
+    }
+  },
+  {
+    "name": "Activated Resource Config to SIPS dev_talcorn_int",
+    "eventSubscription": "ConfigServer.Config.Activated.terminal-config-test.RGTAK-dev-talcorn-int",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-talcorn.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52454"
+      }
+    }
+  },
+  {
+    "name": "Activated Vehicle Config to SIPS dev_talcorn_int",
+    "eventSubscription": "ConfigServer.Config.Activated.vehicle-config-test.WV04-dev-talcorn-int",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-talcorn.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52455"
+      }
+    }
+  },
+  {
+    "name": "Activated Vehicle Conops to SIPS",
+    "eventSubscription": "ConfigServer.Config.Activated.vehicle-config-test.WV04-dev-cferrer",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX14P6LS1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/3846"
+      }
+    }
+  },
+  {
+    "name": "MCS Contact Plan event to SIPS dev_mhanawalt",
+    "eventSubscription": "LGMT.MCS.ContactPlan.Loaded.MHDEV",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX1487LS1:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50687"
+      }
+    }
+  },
+  {
+    "name": "IERS Event to SIPS dev_mhanawalt",
+    "eventSubscription": "LGMT.IERS.NewIERSBulletin.MHDEVv",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX1487LS1:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50690"
+      }
+    }
+  },
+  {
+    "name": "Activated Resource Config to SIPS dev_mhanawalt",
+    "eventSubscription": "ConfigServer.Config.Activated.terminal-config-test.RGTAK-dev-mhanawalt",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX1487LS1:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50691"
+      }
+    }
+  },
+  {
+    "name": "MCS TTLC event to ADCP",
+    "eventSubscription": "LGMT.MCS.Ancillary.NewTtlc",
+    "eventVersionSubscription": "*",
+    "clientID": "D1MXa_A46Sqd",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX5MGWTR1.digitalglobe.com:8089\/ttlc"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52231"
+      }
+    }
+  },
+  {
+    "name": "LGMT.MCS.RCCS.TelUplinkEvent_https:\/\/tms-jw-test.apps.cfdev1.ux.dg.local\/event-receiver",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent",
+    "eventVersionSubscription": "*",
+    "clientID": "9lavjMAuXRi6",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/tms-jw-test.apps.cfdev1.ux.dg.local\/event-receiver"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/53098"
+      }
+    }
+  },
+  {
+    "name": "Order Status Update reg",
+    "eventSubscription": "Inventory.Order.StatusUpdate",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/internal-order-service.reg.apps.cfdev1.ux.dg.local\/orders\/status"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50591"
+      }
+    }
+  },
+  {
+    "name": "Contact Plan Update Event to AWA ${app.environment}",
+    "eventSubscription": "LGMT.MCS.ContactPlan.Loaded.JTDEV",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/pu00infwks208:8080\/event"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52215"
+      }
+    }
+  },
+  {
+    "name": "FunctionalTest Subscription",
+    "eventSubscription": "FunctionalTest Event",
+    "eventVersionSubscription": "*",
+    "clientID": "ErSi5qRMe2E-",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/10.92.80.245:8231\/TestSubscription"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/53122"
+      }
+    }
+  },
+  {
+    "name": "IIS_Int_test__LGMT.Production.Strip.EndIngest_http:\/\/10.156.132.89:1081\/events",
+    "eventSubscription": "LGMT.Production.Strip.EndIngest",
+    "eventVersionSubscription": "*",
+    "clientID": "1njlutayseZ1",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/10.156.132.89:1081\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/53063"
+      }
+    }
+  },
+  {
+    "name": "MCS TEL Uplink Notification event to SIPS dev_tyan",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-tyan.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52364"
+      }
+    }
+  },
+  {
+    "name": "MCS Predicted Ephemeris event to SIPS dev_mhanawalt",
+    "eventSubscription": "MCS.PredictedEphemerisService.NewTodStpEphemeris.MHDEV",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX1487LS1:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50686"
+      }
+    }
+  },
+  {
+    "name": "IMS Mission Status event to SIPS dev_mhanawalt",
+    "eventSubscription": "LGMT.IMS.AcquisitionGroundStateChange.MHDEV",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX1487LS1:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50689"
+      }
+    }
+  },
+  {
+    "name": "IMS Mission Status event to SIPS dev_cferrer_int",
+    "eventSubscription": "LGMT.IMS.AcquisitionGroundStateChange",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-cferrer.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50798"
+      }
+    }
+  },
+  {
+    "name": "Activated Resource Config to SIPS dev_cferrer_int",
+    "eventSubscription": "ConfigServer.Config.Activated.terminal-config-test.RGTAK-dev-shutto-int",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-cferrer.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50800"
+      }
+    }
+  },
+  {
+    "name": "Activated Vehicle Config to SIPS dev_cferrer_int",
+    "eventSubscription": "ConfigServer.Config.Activated.vehicle-config-test.WV04-dev-shutto-int",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-cferrer.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50801"
+      }
+    }
+  },
+  {
+    "name": "LGMT.MCS.RCCS.TelUplinkEvent_https:\/\/localhost:7000\/event-receiver",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent",
+    "eventVersionSubscription": "*",
+    "clientID": "9lavjMAuXRi6",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/localhost:7000\/event-receiver"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52624"
+      }
+    }
+  },
+  {
+    "name": "inventory_event_listener_subscription_created",
+    "eventSubscription": "p2020.inventory.image.created",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/inventory-event-listener.devint.apps.cfdev1.ux.dg.local\/add"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51533"
+      }
+    }
+  },
+  {
+    "name": "MCS Attitude event to ADCP - LGMT.MCS.Ancillary.NewAttitude-RD",
+    "eventSubscription": "LGMT.MCS.Ancillary.NewAttitude-RD",
+    "eventVersionSubscription": "*",
+    "clientID": "D1MXa_A46Sqd",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXCY20QS1.digitalglobe.com:8080\/attitude"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52314"
+      }
+    }
+  },
+  {
+    "name": "IERS Event to SIPS dev_cferrer",
+    "eventSubscription": "LGMT.IERS.NewIERSBulletin.CFDEVv",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX14P6LS1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52096"
+      }
+    }
+  },
+  {
+    "name": "MCS Contact Plan event to SIPS ${app.environment}",
+    "eventSubscription": "LGMT.MCS.ContactPlan.Loaded",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXGKDM7Y1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50740"
+      }
+    }
+  },
+  {
+    "name": "MCS Attitude event to ADCP - LGMT.MCS.Ancillary.NewAttitude-WB",
+    "eventSubscription": "LGMT.MCS.Ancillary.NewAttitude-WB",
+    "eventVersionSubscription": "*",
+    "clientID": "D1MXa_A46Sqd",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX5MGWTR1.digitalglobe.com:8089\/attitude"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52311"
+      }
+    }
+  },
+  {
+    "name": "MCS Ephemeris event to ADCP - LGMT.MCS.Ancillary.NewEphemeris-WB",
+    "eventSubscription": "LGMT.MCS.Ancillary.NewEphemeris-WB",
+    "eventVersionSubscription": "*",
+    "clientID": "D1MXa_A46Sqd",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX5MGWTR1.digitalglobe.com:8089\/ephemeris"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52312"
+      }
+    }
+  },
+  {
+    "name": "IIS_Int_test__p2020.inventory.imageSamplePoint.created_http:\/\/10.156.132.89:1081\/events",
+    "eventSubscription": "p2020.inventory.imageSamplePoint.created",
+    "eventVersionSubscription": "*",
+    "clientID": "1njlutayseZ1",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/10.156.132.89:1081\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/53067"
+      }
+    }
+  },
+  {
+    "name": "IIS_Int_test__p2020.inventory.browse.created_http:\/\/10.156.132.89:1081\/events",
+    "eventSubscription": "p2020.inventory.browse.created",
+    "eventVersionSubscription": "*",
+    "clientID": "1njlutayseZ1",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/10.156.132.89:1081\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/53068"
+      }
+    }
+  },
+  {
+    "name": "Sample Pattern 1 Test Subscription Base Template",
+    "eventSubscription": "SAMPLE.EVENT.ACTIVITY",
+    "eventVersionSubscription": "*",
+    "clientID": "k1UvCrKkTnW8",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/pu00infwks097:8090\/events\/receive"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52732"
+      }
+    }
+  },
+  {
+    "name": "Order Status Update devint",
+    "eventSubscription": "Inventory.Order.StatusUpdate",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "http:\/\/pu00infwks024:8080\/orders\/status"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/2254"
+      }
+    }
+  },
+  {
+    "name": "Activated Vehicle Config to SIPS dev_mhanawalt",
+    "eventSubscription": "ConfigServer.Config.Activated.vehicle-config-test.WV04-dev-mhanawalt",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX1487LS1:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50692"
+      }
+    }
+  },
+  {
+    "name": "MCS Contact Plan event to SIPS dev_cferrer_int",
+    "eventSubscription": "LGMT.MCS.ContactPlan.Loaded",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-cferrer.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50796"
+      }
+    }
+  },
+  {
+    "name": "MCS TEL Uplink Notification event to SIPS dev_cferrer_int",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-cferrer.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50797"
+      }
+    }
+  },
+  {
+    "name": "IERS Event to SIPS dev_cferrer_int",
+    "eventSubscription": "LGMT.IERS.NewIERSBulletinv",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-cferrer.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50799"
+      }
+    }
+  },
+  {
+    "name": "bomm-dev-gparrish-image-ready",
+    "eventSubscription": "LGMT.Production.Strip.EndIngest",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/dxghyvyq1.digitalglobe.com:8180\/bomm\/event\/inventory"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51296"
+      }
+    }
+  },
+  {
+    "name": "inventory_event_listener_subscription_updated",
+    "eventSubscription": "p2020.inventory.image.updated",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/inventory-event-listener.devint.apps.cfdev1.ux.dg.local\/update"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51534"
+      }
+    }
+  },
+  {
+    "name": "LGMT.MCS.RCCS.TelUplinkEvent_https:\/\/tel-mgmt-service-ui-prototype.apps.cfdev1.ux.dg.local\/event-receiver",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent",
+    "eventVersionSubscription": "*",
+    "clientID": "9lavjMAuXRi6",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/tel-mgmt-service-ui-prototype.apps.cfdev1.ux.dg.local\/event-receiver"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52480"
+      }
+    }
+  },
+  {
+    "name": "MCS Predicted Ephemeris event to SIPS dev_bcarande",
+    "eventSubscription": "MCS.PredictedEphemerisService.NewTodStpEphemeris.BCDEV",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX35ZL6V1.digitalglobe.com:8087\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50676"
+      }
+    }
+  },
+  {
+    "name": "MCS TEL Uplink Notification event to SIPS dev_bcarande",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent.BCDEV",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX35ZL6V1.digitalglobe.com:8087\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50678"
+      }
+    }
+  },
+  {
+    "name": "IMS Mission Status event to SIPS dev_bcarande",
+    "eventSubscription": "LGMT.IMS.AcquisitionGroundStateChange.BCDEV",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX35ZL6V1.digitalglobe.com:8087\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50679"
+      }
+    }
+  },
+  {
+    "name": "Monitor subscription ${cf.diet}_${unique.key}",
+    "eventSubscription": "monitor_event_devint_\"\"",
+    "eventVersionSubscription": "*",
+    "clientID": "k1UvCrKkTnW8",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/pu00infwks069:8080\/consumeevent"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52238"
+      }
+    }
+  },
+  {
+    "name": "MCS Contact Plan event to SIPS dev_tyan",
+    "eventSubscription": "LGMT.MCS.ContactPlan.Loaded",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-tyan.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52363"
+      }
+    }
+  },
+  {
+    "name": "IERS Event to SIPS dev_tyan",
+    "eventSubscription": "LGMT.IERS.NewIERSBulletinv",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-tyan.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52366"
+      }
+    }
+  },
+  {
+    "name": "IIS_Int_test__p2020.inventory.image.created_http:\/\/10.156.132.89:1081\/events",
+    "eventSubscription": "p2020.inventory.image.created",
+    "eventVersionSubscription": "*",
+    "clientID": "1njlutayseZ1",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/10.156.132.89:1081\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/53065"
+      }
+    }
+  },
+  {
+    "name": "IIS_Int_test__p2020.inventory.image.updated_http:\/\/10.156.132.89:1081\/events",
+    "eventSubscription": "p2020.inventory.image.updated",
+    "eventVersionSubscription": "*",
+    "clientID": "1njlutayseZ1",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/10.156.132.89:1081\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/53066"
+      }
+    }
+  },
+  {
+    "name": "IIS_Int_test__LGMT.ING.PMARComplete.pmarStoredComplete_http:\/\/10.156.132.89:1081\/events",
+    "eventSubscription": "LGMT.ING.PMARComplete.pmarStoredComplete",
+    "eventVersionSubscription": "*",
+    "clientID": "1njlutayseZ1",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/10.156.132.89:1081\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/53070"
+      }
+    }
+  },
+  {
+    "name": "Activated Vehicle Config to SIPS ${app.environment}",
+    "eventSubscription": "ConfigServer.Config.Activated.vehicle-config-test.WV04-dev-barthur",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXGKDM7Y1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50745"
+      }
+    }
+  },
+  {
+    "name": "MCS TEL Uplink Notification event to SIPS dev_mhanawalt",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent.MHDEV",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX1487LS1:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50688"
+      }
+    }
+  },
+  {
+    "name": "bomm-dchum-image-ready-dchum",
+    "eventSubscription": "LGMT.Production.Strip.EndIngest",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/bomm-dchum.apps.cfdev1.ux.dg.local\/event\/inventory"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51776"
+      }
+    }
+  },
+  {
+    "name": "Test Telemetry Available",
+    "eventSubscription": "LGMT.MCS.TLM.newTelemAvail",
+    "eventVersionSubscription": "*",
+    "clientID": "d1RSe7PfIeFT",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "http:\/\/10.52.47.102:1119\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/10612"
+      }
+    }
+  },
+  {
+    "name": "MCS Ephemeris event to ADCP - LGMT.MCS.Ancillary.NewEphemeris-RD",
+    "eventSubscription": "LGMT.MCS.Ancillary.NewEphemeris-RD",
+    "eventVersionSubscription": "*",
+    "clientID": "D1MXa_A46Sqd",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXCY20QS1.digitalglobe.com:8080\/ephemeris"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52315"
+      }
+    }
+  },
+  {
+    "name": "IPS Int-Test Start Event1",
+    "eventSubscription": "LGMT.IPS.ImageryProductionStart",
+    "eventVersionSubscription": "*",
+    "clientID": "4GWgpTidzGvv",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/10.156.132.110:1114\/StartEventPub"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/10613"
+      }
+    }
+  },
+  {
+    "name": "IIS_Int_test__LGMT.Production.Strip.StartIngest_http:\/\/10.156.132.89:1081\/events",
+    "eventSubscription": "LGMT.Production.Strip.StartIngest",
+    "eventVersionSubscription": "*",
+    "clientID": "1njlutayseZ1",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/10.156.132.89:1081\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/53062"
+      }
+    }
+  },
+  {
+    "name": "Activated Vehicle Config to SIPS dev_tyan",
+    "eventSubscription": "ConfigServer.Config.Activated.vehicle-config-test.WV04-dev-kev",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-tyan.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52368"
+      }
+    }
+  },
+  {
+    "name": "MCS TTLC event to ADCP - LGMT.MCS.Ancillary.NewTtlc-RD",
+    "eventSubscription": "LGMT.MCS.Ancillary.NewTtlc-RD",
+    "eventVersionSubscription": "*",
+    "clientID": "D1MXa_A46Sqd",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXCY20QS1.digitalglobe.com:8080\/ttlc"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52316"
+      }
+    }
+  },
+  {
+    "name": "PES new ephemeris subscription",
+    "eventSubscription": "MCS.PredictedEphemerisService.NewTodLtpEphemeris",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/predicted-ephemeris-service.devint.apps.cfdev1.ux.dg.local\/new_ephem_confirm"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/2092"
+      }
+    }
+  },
+  {
+    "name": "TEDSS-TMS.State.Changes",
+    "eventSubscription": "LGMT.MCS.TelMgmtService.TaskWindowUpdate",
+    "eventVersionSubscription": "*",
+    "clientID": "AEAN4jK4zgk3",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "service:\/\/task-event-driven-state-setter\/abc123\/devint\/events\/receive"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/2752"
+      }
+    }
+  },
+  {
+    "name": "MCS Contact Plan event to SIPS dev_bcarande",
+    "eventSubscription": "LGMT.MCS.ContactPlan.Loaded.BCDEV",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX35ZL6V1.digitalglobe.com:8087\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50677"
+      }
+    }
+  },
+  {
+    "name": "IMS Mission Status event to SIPS dev_rdrew_int",
+    "eventSubscription": "LGMT.IMS.AcquisitionGroundStateChange",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-rdrew.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50696"
+      }
+    }
+  },
+  {
+    "name": "IERS Event to SIPS dev_bcarande",
+    "eventSubscription": "LGMT.IERS.NewIERSBulletin.BCDEVv",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX35ZL6V1.digitalglobe.com:8087\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50680"
+      }
+    }
+  },
+  {
+    "name": "MCS Predicted Ephemeris event to SIPS dev_cferrer",
+    "eventSubscription": "MCS.PredictedEphemerisService.NewTodStpEphemeris.CFDEV",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX14P6LS1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50618"
+      }
+    }
+  },
+  {
+    "name": "MCS TEL Uplink Notification event to SIPS dev_cferrer",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent.CFDEV",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX14P6LS1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50620"
+      }
+    }
+  },
+  {
+    "name": "Order Status Update localhost",
+    "eventSubscription": "Inventory.Order.StatusUpdate",
+    "eventVersionSubscription": "*",
+    "clientID": "k1UvCrKkTnW8",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "http:\/\/pu00infwks107:8080\/orders\/status"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/53099"
+      }
+    }
+  },
+  {
+    "name": "MCS TTLC event to ADCP - LGMT.MCS.Ancillary.NewTtlc-WB",
+    "eventSubscription": "LGMT.MCS.Ancillary.NewTtlc-WB",
+    "eventVersionSubscription": "*",
+    "clientID": "D1MXa_A46Sqd",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX5MGWTR1.digitalglobe.com:8089\/ttlc"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52313"
+      }
+    }
+  },
+  {
+    "name": "IIS_Int_test__LGMT.Production.Strip.IngestReprocess_http:\/\/10.156.132.89:1081\/events",
+    "eventSubscription": "LGMT.Production.Strip.IngestReprocess",
+    "eventVersionSubscription": "*",
+    "clientID": "1njlutayseZ1",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/10.156.132.89:1081\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/53064"
+      }
+    }
+  },
+  {
+    "name": "bomm-bruffing-image-ready-bruffing",
+    "eventSubscription": "LGMT.Production.Strip.EndIngest",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/bomm-bruffing.apps.cfdev1.ux.dg.local\/event\/inventory"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51665"
+      }
+    }
+  },
+  {
+    "name": "IIS_Int_test__p2020.inventory.coverAssignment.created_http:\/\/10.156.132.89:1081\/events",
+    "eventSubscription": "p2020.inventory.coverAssignment.created",
+    "eventVersionSubscription": "*",
+    "clientID": "1njlutayseZ1",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/10.156.132.89:1081\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/53069"
+      }
+    }
+  },
+  {
+    "name": "bomm-dev-gparrish-image-ready-dev-gparrish",
+    "eventSubscription": "LGMT.Production.Strip.EndIngest",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/dxghyvyq1.digitalglobe.com:8180\/bomm\/event\/inventory"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51666"
+      }
+    }
+  },
+  {
+    "name": "MCS Contact Plan event to SIPS dev_rdrew_int",
+    "eventSubscription": "LGMT.MCS.ContactPlan.Loaded",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-rdrew.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50694"
+      }
+    }
+  },
+  {
+    "name": "Contact Plan Update Event to AWA dev_dpremraj",
+    "eventSubscription": "${contact.plan.event.type}",
+    "eventVersionSubscription": "*",
+    "clientID": "QqagmtcsQxwM",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/pu00infwks104:8080\/event"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52773"
+      }
+    }
+  },
+  {
+    "name": "BoMM Image Ready Event Subscription-jferron",
+    "eventSubscription": "LGMT.Production.Strip.EndIngest",
+    "eventVersionSubscription": "*",
+    "clientID": "y0I86fyG0jSY",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/bomm-jferron.apps.cfdev1.ux.dg.local\/event\/inventory"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51681"
+      }
+    }
+  },
+  {
+    "name": "Activated Resource Config to SIPS dev_bcarande",
+    "eventSubscription": "ConfigServer.Config.Activated.terminal-config-test.RGTAK-dev",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX35ZL6V1.digitalglobe.com:8087\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50681"
+      }
+    }
+  },
+  {
+    "name": "Activated Vehicle Config to SIPS dev_bcarande",
+    "eventSubscription": "ConfigServer.Config.Activated.vehicle-config-test.WV04-dev",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX35ZL6V1.digitalglobe.com:8087\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50682"
+      }
+    }
+  },
+  {
+    "name": "Subscription for IFS integration test",
+    "eventSubscription": "LGMT.Production.WidebandAvailable",
+    "eventVersionSubscription": "*",
+    "clientID": "IFS-integration-test",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/DXHTNYJQ1.digitalglobe.com:1084\/EventPub"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/2743"
+      }
+    }
+  },
+  {
+    "name": "MCS Contact Plan event to SIPS dev_cferrer",
+    "eventSubscription": "LGMT.MCS.ContactPlan.Loaded.CFDEV",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX14P6LS1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50619"
+      }
+    }
+  },
+  {
+    "name": "Activated Resource Config to SIPS dev_cferrer",
+    "eventSubscription": "LGMT.MCS.ConfigServer.Config.Activated.terminal-config-test.RGTAK-dev-cferrer",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX14P6LS1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50623"
+      }
+    }
+  },
+  {
+    "name": "Activated Vehicle Config to SIPS dev_cferrer",
+    "eventSubscription": "ConfigServer.Config.Activated.vehicle-config-test.WV04-dev-cferrer",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX14P6LS1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50624"
+      }
+    }
+  },
+  {
+    "name": "IMS Mission Status event to SIPS dev_gweaver",
+    "eventSubscription": "LGMT.IMS.AcquisitionGroundStateChange",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-gweaver.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51628"
+      }
+    }
+  },
+  {
+    "name": "Activated Resource Config to SIPS dev_gweaver",
+    "eventSubscription": "ConfigServer.Config.Activated.terminal-config-test.RGTAK-dev_gweaver",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-gweaver.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51630"
+      }
+    }
+  },
+  {
+    "name": "MCS TTLC event to ADCP - LGMT.MCS.Ancillary.NewTtlc-GW",
+    "eventSubscription": "LGMT.MCS.Ancillary.NewTtlc-GW",
+    "eventVersionSubscription": "*",
+    "clientID": "D1MXa_A46Sqd",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXGHQVYQ1:8081\/ttlc"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52327"
+      }
+    }
+  },
+  {
+    "name": "PES MCS.PredictedEphemerisService.NewEcfStpEphemeris subscription",
+    "eventSubscription": "MCS.PredictedEphemerisService.NewEcfStpEphemeris",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/predicted-ephemeris-service.apps.cfdev1.ux.dg.local\/new_ephem_confirm"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/3819"
+      }
+    }
+  },
+  {
+    "name": "PES MCS.PredictedEphemerisService.NewTleStpEphemeris subscription",
+    "eventSubscription": "MCS.PredictedEphemerisService.NewTleStpEphemeris",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/predicted-ephemeris-service.apps.cfdev1.ux.dg.local\/new_ephem_confirm"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/3822"
+      }
+    }
+  },
+  {
+    "name": "MCS TEL Uplink Notification event to SIPS dev_rdrew_int",
+    "eventSubscription": "LGMT.MCS.RePER.TelUplinkEvent",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-rdrew.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50695"
+      }
+    }
+  },
+  {
+    "name": "IERS Event to SIPS dev_rdrew_int",
+    "eventSubscription": "LGMT.IERS.NewIERSBulletinv",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-rdrew.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50697"
+      }
+    }
+  },
+  {
+    "name": "Activated Resource Config to SIPS dev_rdrew_int",
+    "eventSubscription": "ConfigServer.Config.Activated.terminal-config-test.RGTAK-dev-rdrew-int",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-rdrew.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50698"
+      }
+    }
+  },
+  {
+    "name": "IMS Mission Status event to SIPS dev_cferrer",
+    "eventSubscription": "LGMT.IMS.AcquisitionGroundStateChange.CFDEV",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX14P6LS1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50621"
+      }
+    }
+  },
+  {
+    "name": "MCS TEL Uplink Notification event to SIPS dev_gweaver",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-gweaver.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51627"
+      }
+    }
+  },
+  {
+    "name": "IERS Event to SIPS dev_gweaver",
+    "eventSubscription": "LGMT.IERS.NewIERSBulletinv",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-gweaver.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51629"
+      }
+    }
+  },
+  {
+    "name": "Activated Vehicle Config to SIPS dev_gweaver",
+    "eventSubscription": "ConfigServer.Config.Activated.vehicle-config-test.WV04-dev_gweaver",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-gweaver.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51631"
+      }
+    }
+  },
+  {
+    "name": "Activated Resource Config to SIPS dev_rdrew",
+    "eventSubscription": "ConfigServer.Config.Activated.terminal-config.*",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXCY20QS1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50630"
+      }
+    }
+  },
+  {
+    "name": "PES MCS.PredictedEphemerisService.NewEcfLtpEphemeris subscription",
+    "eventSubscription": "MCS.PredictedEphemerisService.NewEcfLtpEphemeris",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/predicted-ephemeris-service.apps.cfdev1.ux.dg.local\/new_ephem_confirm"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/3823"
+      }
+    }
+  },
+  {
+    "name": "LGMT.MCS.RCCS.TelUplinkEvent_https:\/\/10.52.46.79:9292\/event_receiver",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent",
+    "eventVersionSubscription": "*",
+    "clientID": "9lavjMAuXRi6",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/10.52.46.79:9292\/event_receiver"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/2500"
+      }
+    }
+  },
+  {
+    "name": "LGMT.MCS.RCCS.TelUplinkEvent_https:\/\/tel-mgmt-service.devint.apps.cfdev1.ux.dg.local\/event_receiver",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent",
+    "eventVersionSubscription": "*",
+    "clientID": "lchewku-Drvk",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/tel-mgmt-service.devint.apps.cfdev1.ux.dg.local\/event_receiver"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/2503"
+      }
+    }
+  },
+  {
+    "name": "MCS Contact Plan event to SIPS dev_rdrew",
+    "eventSubscription": "LGMT.MCS.ContactPlan.Loaded",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXCY20QS1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50626"
+      }
+    }
+  },
+  {
+    "name": "IMS Mission Status event to SIPS dev_rdrew",
+    "eventSubscription": "LGMT.IMS.AcquisitionGroundStateChange",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXCY20QS1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50628"
+      }
+    }
+  },
+  {
+    "name": "MCS Attitude event to ADCP - LGMT.MCS.Ancillary.NewAttitude-GW",
+    "eventSubscription": "LGMT.MCS.Ancillary.NewAttitude-GW",
+    "eventVersionSubscription": "*",
+    "clientID": "D1MXa_A46Sqd",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXGHQVYQ1:8081\/attitude"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52325"
+      }
+    }
+  },
+  {
+    "name": "MCS Ephemeris event to ADCP - LGMT.MCS.Ancillary.NewEphemeris-GW",
+    "eventSubscription": "LGMT.MCS.Ancillary.NewEphemeris-GW",
+    "eventVersionSubscription": "*",
+    "clientID": "D1MXa_A46Sqd",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXGHQVYQ1:8081\/ephemeris"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52326"
+      }
+    }
+  },
+  {
+    "name": "Order Status Update int",
+    "eventSubscription": "Inventory.Order.StatusUpdate",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/internal-order-service.int.apps.cfdev1.ux.dg.local\/orders\/status"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/10618"
+      }
+    }
+  },
+  {
+    "name": "MCS TEL Uplink Notification event to SIPS dev_rdrew",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXCY20QS1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50627"
+      }
+    }
+  },
+  {
+    "name": "newTelemAvail_devint_ttlc-generation-service.devint.apps.cfdev1.ux.dg.local",
+    "eventSubscription": "newTelemAvail",
+    "eventVersionSubscription": "*",
+    "clientID": "v_iU2tVR7s43",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/ttlc-generation-service.devint.apps.cfdev1.ux.dg.local\/event"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51141"
+      }
+    }
+  },
+  {
+    "name": "IERS Event to SIPS dev_rdrew",
+    "eventSubscription": "LGMT.IERS.NewIERSBulletinv",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXCY20QS1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50629"
+      }
+    }
+  },
+  {
+    "name": "Activated Vehicle Config to SIPS dev_rdrew",
+    "eventSubscription": "ConfigServer.Config.Activated.vehicle-config-test.WV04-dev-rdrew",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXCY20QS1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50631"
+      }
+    }
+  },
+  {
+    "name": "BoMM Image Ready Event Subscription-rgoldsworthy",
+    "eventSubscription": "LGMT.Production.Strip.EndIngest",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/bomm-rgoldsworthy.apps.cfdev1.ux.dg.local\/event\/inventory"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52329"
+      }
+    }
+  },
+  {
+    "name": "MCS Contact Plan event to SIPS dev_tyan_int",
+    "eventSubscription": "LGMT.MCS.ContactPlan.Loaded",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-tyan.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52500"
+      }
+    }
+  },
+  {
+    "name": "Activated Resource Config to SIPS dev_tyan_int",
+    "eventSubscription": "ConfigServer.Config.Activated.terminal-config-test.RGTAK-dev-tyan-int",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-tyan.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52504"
+      }
+    }
+  },
+  {
+    "name": "LGMT.MCS.RCCS.TelUplinkEvent_https:\/\/10.52.46.79:7000\/event-receiver",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent",
+    "eventVersionSubscription": "*",
+    "clientID": "9lavjMAuXRi6",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/10.52.46.79:7000\/event-receiver"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/3087"
+      }
+    }
+  },
+  {
+    "name": "MCS Predicted Ephemeris event to SIPS dev_tyan_int",
+    "eventSubscription": "MCS.PredictedEphemerisService.NewTodStpEphemeris",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-tyan.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52499"
+      }
+    }
+  },
+  {
+    "name": "MCS TEL Uplink Notification event to SIPS devint",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer.devint.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50655"
+      }
+    }
+  },
+  {
+    "name": "MCS Predicted Ephemeris event to SIPS dev_shutto_int",
+    "eventSubscription": "MCS.PredictedEphemerisService.NewTodStpEphemeris",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-shutto.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50639"
+      }
+    }
+  },
+  {
+    "name": "MCS TEL Uplink Notification event to SIPS dev_shutto_int",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-shutto.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50641"
+      }
+    }
+  },
+  {
+    "name": "MCS TEL Uplink Notification event to SIPS dev_tyan_int",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-tyan.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52501"
+      }
+    }
+  },
+  {
+    "name": "IERS Event to SIPS dev_kreine_int",
+    "eventSubscription": "LGMT.IERS.NewIERSBulletinv",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-kreine.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50636"
+      }
+    }
+  },
+  {
+    "name": "MCS Predicted Ephemeris event to SIPS dev_wbaker",
+    "eventSubscription": "MCS.PredictedEphemerisService.NewTodStpEphemeris.WBDEV",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX5MGWTR1.digitalglobe.com:8082\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50646"
+      }
+    }
+  },
+  {
+    "name": "IERS Event to SIPS dev_tyan_int",
+    "eventSubscription": "LGMT.IERS.NewIERSBulletinv",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-tyan.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52503"
+      }
+    }
+  },
+  {
+    "name": "bomm-rgoldsworthy-image-ready",
+    "eventSubscription": "LGMT.Production.Strip.EndIngest",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/bomm-rgoldsworthy.apps.cfdev1.ux.dg.local\/event\/inventory"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51142"
+      }
+    }
+  },
+  {
+    "name": "BoMM Image Ready Event Subscription-dchum",
+    "eventSubscription": "LGMT.Production.Strip.EndIngest",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/bomm-dchum.apps.cfdev1.ux.dg.local\/event\/inventory"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/51704"
+      }
+    }
+  },
+  {
+    "name": "MCS Contact Plan event to SIPS devint",
+    "eventSubscription": "LGMT.MCS.ContactPlan.Loaded",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer.devint.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50654"
+      }
+    }
+  },
+  {
+    "name": "Order Status Update 10.156.87.31",
+    "eventSubscription": "Inventory.Order.StatusUpdate",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "http:\/\/10.156.87.31:8080\/orders\/status"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/2590"
+      }
+    }
+  },
+  {
+    "name": "MCS Contact Plan event to SIPS dev_wbaker",
+    "eventSubscription": "LGMT.MCS.ContactPlan.Loaded.WBDEV",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX5MGWTR1.digitalglobe.com:8082\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50647"
+      }
+    }
+  },
+  {
+    "name": "MCS TEL Uplink Notification event to SIPS dev_wbaker",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent.WBDEV",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX5MGWTR1.digitalglobe.com:8082\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50648"
+      }
+    }
+  },
+  {
+    "name": "IERS Event to SIPS dev_wbaker",
+    "eventSubscription": "LGMT.IERS.NewIERSBulletin.WBDEVv",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX5MGWTR1.digitalglobe.com:8082\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50650"
+      }
+    }
+  },
+  {
+    "name": "Activated Resource Config to SIPS dev_kreine_int",
+    "eventSubscription": "ConfigServer.Config.Activated.terminal-config-test.*",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-kreine.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50637"
+      }
+    }
+  },
+  {
+    "name": "IMS Mission Status event to SIPS dev_tyan_int",
+    "eventSubscription": "LGMT.IMS.AcquisitionGroundStateChange",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-tyan.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52502"
+      }
+    }
+  },
+  {
+    "name": "IMS Mission Status event to SIPS devint",
+    "eventSubscription": "LGMT.IMS.AcquisitionGroundStateChange",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer.devint.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50656"
+      }
+    }
+  },
+  {
+    "name": "Activated Resource Config to SIPS devint",
+    "eventSubscription": "ConfigServer.Config.Activated.terminal-config.*",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer.devint.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50658"
+      }
+    }
+  },
+  {
+    "name": "Activated Vehicle Config to SIPS dev_tyan_int",
+    "eventSubscription": "ConfigServer.Config.Activated.vehicle-config-test.WV04-dev-tyan-int",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-tyan.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52505"
+      }
+    }
+  },
+  {
+    "name": "IMS Mission Status event to SIPS dev_shutto_int",
+    "eventSubscription": "LGMT.IMS.AcquisitionGroundStateChange",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-shutto.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50642"
+      }
+    }
+  },
+  {
+    "name": "MCS Predicted Ephemeris event to SIPS dev_ddodge",
+    "eventSubscription": "MCS.PredictedEphemerisService.NewTodStpEphemeris.DDDEV",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXD58QMS1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50715"
+      }
+    }
+  },
+  {
+    "name": "Activated Resource Config to SIPS dev_shutto_int",
+    "eventSubscription": "ConfigServer.Config.Activated.terminal-config-test.RGTAK-dev-shutto-int",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-shutto.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50644"
+      }
+    }
+  },
+  {
+    "name": "MCS Contact Plan event to SIPS dev_kreine_int",
+    "eventSubscription": "LGMT.MCS.ContactPlan.Loaded",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-kreine.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50633"
+      }
+    }
+  },
+  {
+    "name": "Activated Resource Config to SIPS dev_ddodge",
+    "eventSubscription": "ConfigServer.Config.Activated.terminal-config.RGTAK-DDDEV",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXD58QMS1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50720"
+      }
+    }
+  },
+  {
+    "name": "Activated Vehicle Config to SIPS dev_shutto_int",
+    "eventSubscription": "ConfigServer.Config.Activated.vehicle-config-test.WV04-dev-shutto-int",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-shutto.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50645"
+      }
+    }
+  },
+  {
+    "name": "MCS Predicted Ephemeris event to SIPS dev_tschmid_int",
+    "eventSubscription": "MCS.PredictedEphemerisService.NewTodStpEphemeris",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-tschmid.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52336"
+      }
+    }
+  },
+  {
+    "name": "MCS Contact Plan event to SIPS dev_tschmid_int",
+    "eventSubscription": "LGMT.MCS.ContactPlan.Loaded",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-tschmid.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52337"
+      }
+    }
+  },
+  {
+    "name": "IERS Event to SIPS dev_tschmid_int",
+    "eventSubscription": "LGMT.IERS.NewIERSBulletinv",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-tschmid.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52340"
+      }
+    }
+  },
+  {
+    "name": "Activated Vehicle Config to SIPS dev_tschmid_int",
+    "eventSubscription": "ConfigServer.Config.Activated.vehicle-config-test.WV04-dev-shutto-int",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-tschmid.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52342"
+      }
+    }
+  },
+  {
+    "name": "MCS Predicted Ephemeris event to SIPS devint",
+    "eventSubscription": "MCS.PredictedEphemerisService.NewTodStpEphemeris",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer.devint.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50653"
+      }
+    }
+  },
+  {
+    "name": "IMS Mission Status event to SIPS dev_wbaker",
+    "eventSubscription": "LGMT.IMS.AcquisitionGroundStateChange.WBDEV",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX5MGWTR1.digitalglobe.com:8082\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50649"
+      }
+    }
+  },
+  {
+    "name": "PES LGMT.MCS.PredictedEphemerisService.NewEphemerisAvailable subscription",
+    "eventSubscription": "LGMT.MCS.PredictedEphemerisService.NewEphemerisAvailable",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/predicted-ephemeris-service.apps.cfdev1.ux.dg.local\/new_ephem_confirm"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/3818"
+      }
+    }
+  },
+  {
+    "name": "IERS Event to SIPS devint",
+    "eventSubscription": "LGMT.IERS.NewIERSBulletinv",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer.devint.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50657"
+      }
+    }
+  },
+  {
+    "name": "MCS Contact Plan event to SIPS dev_shutto_int",
+    "eventSubscription": "LGMT.MCS.ContactPlan.Loaded",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-shutto.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50640"
+      }
+    }
+  },
+  {
+    "name": "IERS Event to SIPS dev_shutto_int",
+    "eventSubscription": "LGMT.IERS.NewIERSBulletinv",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-shutto.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50643"
+      }
+    }
+  },
+  {
+    "name": "MCS TEL Uplink Notification event to SIPS dev_tschmid_int",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-tschmid.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52338"
+      }
+    }
+  },
+  {
+    "name": "IMS Mission Status event to SIPS dev_tschmid_int",
+    "eventSubscription": "LGMT.IMS.AcquisitionGroundStateChange",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-tschmid.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52339"
+      }
+    }
+  },
+  {
+    "name": "Activated Vehicle Config to SIPS devint",
+    "eventSubscription": "ConfigServer.Config.Activated.vehicle-config-test.WV04-devint",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer.devint.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50659"
+      }
+    }
+  },
+  {
+    "name": "Activated Resource Config to SIPS dev_wbaker",
+    "eventSubscription": "ConfigServer.Config.Activated.terminal-config-test.RGTAK-dev-wbaker",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX5MGWTR1.digitalglobe.com:8082\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50651"
+      }
+    }
+  },
+  {
+    "name": "Activated Vehicle Config to SIPS dev_wbaker",
+    "eventSubscription": "ConfigServer.Config.Activated.vehicle-config-test.WV04-dev-wbaker",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DX5MGWTR1.digitalglobe.com:8082\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50652"
+      }
+    }
+  },
+  {
+    "name": "MCS Contact Plan event to SIPS dev_ddodge",
+    "eventSubscription": "LGMT.MCS.ContactPlan.Loaded.DDDEV",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXD58QMS1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50716"
+      }
+    }
+  },
+  {
+    "name": "IERS Event to SIPS dev_ddodge",
+    "eventSubscription": "LGMT.IERS.NewIERSBulletin.DDDEVv",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXD58QMS1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50719"
+      }
+    }
+  },
+  {
+    "name": "Activated Vehicle Config to SIPS",
+    "eventSubscription": "ConfigServer.Config.Activated.vehicle-config-test.*",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-ddodge.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/10616"
+      }
+    }
+  },
+  {
+    "name": "MCS TEL Uplink Notification event to SIPS dev_kreine_int",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-kreine.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50634"
+      }
+    }
+  },
+  {
+    "name": "IMS Mission Status event to SIPS dev_kreine_int",
+    "eventSubscription": "LGMT.IMS.AcquisitionGroundStateChange",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-kreine.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50635"
+      }
+    }
+  },
+  {
+    "name": "MCS TEL Uplink Notification event to SIPS dev_ddodge",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent.DDDEV",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXD58QMS1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50717"
+      }
+    }
+  },
+  {
+    "name": "IMS Mission Status event to SIPS dev_ddodge",
+    "eventSubscription": "LGMT.IMS.AcquisitionGroundStateChange.DDDEV",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXD58QMS1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50718"
+      }
+    }
+  },
+  {
+    "name": "Activated Vehicle Config to SIPS dev_ddodge",
+    "eventSubscription": "ConfigServer.Config.Activated.vehicle-config-test.WV04-DDDEV",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "http:\/\/DXD58QMS1.digitalglobe.com:8080\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50721"
+      }
+    }
+  },
+  {
+    "name": "Activated Resource Config to SIPS dev_tschmid_int",
+    "eventSubscription": "ConfigServer.Config.Activated.terminal-config-test.RGTAK-dev-shutto-int",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-tschmid.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52341"
+      }
+    }
+  },
+  {
+    "name": "Order Status Update internal-order-service-hmullins-1.apps.cfdev1.ux.dg.local",
+    "eventSubscription": "Inventory.Order.StatusUpdate",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "https:\/\/internal-order-service-hmullins-1.apps.cfdev1.ux.dg.local\/orders\/status"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/10620"
+      }
+    }
+  },
+  {
+    "name": "PES MCS.PredictedEphemerisService.NewEciStpEphemeris subscription",
+    "eventSubscription": "MCS.PredictedEphemerisService.NewEciStpEphemeris",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/predicted-ephemeris-service.apps.cfdev1.ux.dg.local\/new_ephem_confirm"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/3820"
+      }
+    }
+  },
+  {
+    "name": "PES MCS.PredictedEphemerisService.NewTodStpEphemeris subscription",
+    "eventSubscription": "MCS.PredictedEphemerisService.NewTodStpEphemeris",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/predicted-ephemeris-service.apps.cfdev1.ux.dg.local\/new_ephem_confirm"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/3821"
+      }
+    }
+  },
+  {
+    "name": "PES MCS.PredictedEphemerisService.NewEciLtpEphemeris subscription",
+    "eventSubscription": "MCS.PredictedEphemerisService.NewEciLtpEphemeris",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/predicted-ephemeris-service.apps.cfdev1.ux.dg.local\/new_ephem_confirm"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/3824"
+      }
+    }
+  },
+  {
+    "name": "PES MCS.PredictedEphemerisService.NewTodLtpEphemeris subscription",
+    "eventSubscription": "MCS.PredictedEphemerisService.NewTodLtpEphemeris",
+    "eventVersionSubscription": "*",
+    "clientID": null,
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 10,
+      "endpoint": "http:\/\/predicted-ephemeris-service.apps.cfdev1.ux.dg.local\/new_ephem_confirm"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/3825"
+      }
+    }
+  },
+  {
+    "name": "IERS Event to SIPS dev",
+    "eventSubscription": "LGMT.IERS.NewIERSBulletin.KRDEVv",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-kreine.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50673"
+      }
+    }
+  },
+  {
+    "name": "Activated Vehicle Config to SIPS dev",
+    "eventSubscription": "ConfigServer.Config.Activated.vehicle-config-test.WV04-dev",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-kreine.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50675"
+      }
+    }
+  },
+  {
+    "name": null,
+    "eventSubscription": null,
+    "eventVersionSubscription": null,
+    "clientID": "y0I86fyG0jSY",
+    "deliveryMethod": {
+      "type": null,
+      "eventLimit": 0,
+      "endpoint": null
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52353"
+      }
+    }
+  },
+  {
+    "name": "MCS Contact Plan event to SIPS dev",
+    "eventSubscription": "LGMT.MCS.ContactPlan.Loaded.KRDEV",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-kreine.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50670"
+      }
+    }
+  },
+  {
+    "name": "ECS_Test.Event1",
+    "eventSubscription": "*.ECS.Test",
+    "eventVersionSubscription": "1.0",
+    "clientID": "WOOMDx5v1q33",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 5,
+      "endpoint": "http:\/\/10.156.135.76:3030\/event-notification\/ECS_Test.Event1"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/712"
+      }
+    }
+  },
+  {
+    "name": "Activated Resource Config to SIPS dev",
+    "eventSubscription": "ConfigServer.Config.Activated.terminal-config-test.RGTAK-dev",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-kreine.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50674"
+      }
+    }
+  },
+  {
+    "name": "MCS TEL Uplink Notification event to SIPS dev",
+    "eventSubscription": "LGMT.MCS.RCCS.TelUplinkEvent.KRDEV",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-kreine.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50671"
+      }
+    }
+  },
+  {
+    "name": "ECS_Telemetry.Available",
+    "eventSubscription": "*.Telemetry.Available",
+    "eventVersionSubscription": "*",
+    "clientID": "WOOMDx5v1q33",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "http:\/\/10.156.135.76:3030\/event-notification\/ECS_Telemetry.Available"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/713"
+      }
+    }
+  },
+  {
+    "name": "IMS Mission Status event to SIPS dev",
+    "eventSubscription": "LGMT.IMS.AcquisitionGroundStateChange.KRDEV",
+    "eventVersionSubscription": "*",
+    "clientID": "HSoz7xYzfk42",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 0,
+      "endpoint": "https:\/\/sips-message-producer-kreine.apps.cfdev1.ux.dg.local:443\/events"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/50672"
+      }
+    }
+  },
+  {
+    "name": "GrantTestHey",
+    "eventSubscription": "LGMT.MCS.Something.GrantTestHey",
+    "eventVersionSubscription": "*",
+    "clientID": "F9GBw6zTn3yx",
+    "deliveryMethod": {
+      "type": "http-push",
+      "eventLimit": 1,
+      "endpoint": "http:\/\/10.92.81.72:5000\/event"
+    },
+    "_links": {
+      "self": {
+        "href": "https:\/\/event-service-consumer-proxy.devint.apps.cfdev1.ux.dg.local\/subscriptions\/52602"
+      }
+    }
+  }
+]
+
+
