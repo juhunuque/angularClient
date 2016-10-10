@@ -1,7 +1,30 @@
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large waves-effect waves-light blue darken-4" ng-click="refresh()">
+      <i class="large material-icons">autorenew</i>
+    </a>
+</div>
+
 <div class="container center-align">
   <h3>AMQ Operations</h3>
 </div>
 
-<div class="container z-depth-1 containerLimits">
-  
+<div class="containerLimits">
+  <table datatable="ng" dt-options="dtOptions" width="100%">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Queue Name</th>
+                <th># Messages</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="object in objects">
+                <td>{{$index + 1}}</td>
+                <td>{{object.queueName}}</td>
+                <td>{{object.messageCount}}</td>
+                <td><a ng-click="delete(subscription)" href="">Delete</a></td>
+            </tr>
+        </tbody>
+    </table>
 </div>
