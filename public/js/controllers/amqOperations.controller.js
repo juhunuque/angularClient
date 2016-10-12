@@ -4,15 +4,20 @@ angular.module("dgApp")
   var configs = {};
   $scope.tableMsg = "Loading queues";
 
-  $scope.dtOptions = DTOptionsBuilder.newOptions()
-      .withDisplayLength(10)
-      .withOption('bLengthChange', false)
-      .withOption('scrollY', "500px")
-      .withOption('scrollCollapse', true)
-      .withOption('oLanguage', {"sEmptyTable": $scope.tableMsg })
-      .withOption('autoWidth', true);
+  if(angular.equals($scope.dtOptions, undefined)){
+    $scope.dtOptions = DTOptionsBuilder.newOptions()
+        .withDisplayLength(10)
+        .withOption('bLengthChange', false)
+        .withOption('scrollY', "500px")
+        .withOption('scrollCollapse', true)
+        .withOption('oLanguage', {"sEmptyTable": $scope.tableMsg })
+        .withOption('destroy', true)
+        .withOption('autoWidth', true);
+  }
+
 
   $scope.refresh = function(){
+
     configs = $dataDg.getConfig();
     $scope.objects = {};
     $scope.tableMsg = "Loading subscriptions";
