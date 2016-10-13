@@ -10,6 +10,7 @@ angular.module("dgApp")
       .withOption('bLengthChange', false)
       .withOption('scrollY', "500px")
       .withOption('scrollCollapse', true)
+      .withOption('destroy', true)
       .withOption('oLanguage', {"sEmptyTable": $scope.tableMsg })
       .withOption('autoWidth', true);
 

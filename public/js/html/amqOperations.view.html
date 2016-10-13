@@ -23,7 +23,11 @@
                 <td>{{$index + 1}}</td>
                 <td>{{object.queueName}}</td>
                 <td>{{object.messageCount}}</td>
-                <td><a ng-click="delete(subscription)" href="">Delete</a></td>
+                <td>
+                    <a ng-click="messagesQueue(object)" href="">View Messages</a> |
+                    <a ng-click="purgeQueue(object)" href="">Purge</a> |
+                    <a ng-click="deleteQueue(object)" href="">Delete</a>
+                </td>
             </tr>
         </tbody>
     </table>
