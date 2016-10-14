@@ -20,8 +20,8 @@ angular.module("dgApp")
     configs = $dataDg.getConfig();
     $scope.subscriptions = {};
     $scope.tableMsg = "Loading subscriptions";
-    $scope.isLoading = false;
-    $scope.loadingMsg = '';
+    $scope.isLoading = true;
+    $scope.loadingMsg = 'Loading subscriptions';
 
     $http.post('/routeget',{
     'url': configs.eventServiceConsumerProxy + '/subscriptions'
@@ -29,10 +29,12 @@ angular.module("dgApp")
             $scope.subscriptions = response.data._embedded.subscriptions;
             Notification.success({title:'Success', message:'Subscriptions loaded.'});
             $scope.tableMsg = "No data available";
+            $scope.isLoading = false;
           }, function(error){
             Notification.error({title:'Error getting subscriptions', message:'Check the console and try again.'});
             $scope.tableMsg = "Error getting subscriptions";
             console.error('ERROR => ' + JSON.stringify(error.data));
+            $scope.isLoading = false;
           });
   };
 

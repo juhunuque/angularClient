@@ -19,17 +19,19 @@ angular.module("dgApp")
         configs = $dataDg.getConfig();
         $scope.objects = {};
         $scope.tableMsg = "Loading queues";
-        $scope.isLoading = false;
-        $scope.loadingMsg = '';
+        $scope.isLoading = true;
+        $scope.loadingMsg = 'Loading queues';
 
         $http.get('/queuelist').then(function(response){
                 $scope.objects = response.data.queues;
                 Notification.success({title:'Success', message:'Queues loaded.'});
                 $scope.tableMsg = "No data available";
+                $scope.isLoading = false;
               }, function(error){
                 Notification.error({title:'Error getting queues', message:'Check the console and try again.'});
                 $scope.tableMsg = "Error getting queues";
                 console.error('ERROR => ' + JSON.stringify(error.data));
+                $scope.isLoading = false;
               });
     };
 
