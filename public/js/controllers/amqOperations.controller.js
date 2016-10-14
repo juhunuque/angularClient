@@ -1,6 +1,7 @@
 angular.module("dgApp")
 
-.controller('AmqOperationsCtrl',['$scope','$http', 'DTOptionsBuilder', 'Notification', '$dataDg', function($scope, $http, DTOptionsBuilder, Notification, $dataDg){
+.controller('AmqOperationsCtrl',['$scope','$http', 'DTOptionsBuilder', 'Notification', '$dataDg', '$location',
+    function($scope, $http, DTOptionsBuilder, Notification, $dataDg, $location){
   var configs = {};
   $scope.tableMsg = "Loading queues";
 
@@ -47,10 +48,6 @@ angular.module("dgApp")
 
     }
 
-    $scope.messagesQueue = function(queue){
-
-    }
-
     $scope.purgeQueue = function(queue){
         $http.post('/purgequeue',{
           'queuename': queue.queueName
@@ -62,6 +59,11 @@ angular.module("dgApp")
          console.error('ERROR => ' + JSON.stringify(error.data));
        });
 
+    }
+
+    $scope.goToMessages = function(queue){
+        $dataDg.setAmqQueue(queue.queueName);
+        $location.url('/amq/messages');
     }
 
     $scope.refresh();

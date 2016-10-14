@@ -4,8 +4,19 @@
     </a>
 </div>
 
+
+<nav style="background-color: #003A5E;margin-top:-3%;">
+    <div class="nav-wrapper">
+        <div class="col s12">
+            <a href="#/amq" class="breadcrumb">AMQ</a>
+            <a class="breadcrumb">Queue: {{queueName}}</a>
+        </div>
+    </div>
+</nav>
+
+
 <div class="container center-align">
-  <h3>Messages of queue: {{currentQueue}}</h3>
+  <h3 >Messages</h3>
 </div>
 
 <div class="containerLimits">
@@ -13,20 +24,19 @@
         <thead>
             <tr>
                 <th>#</th>
-                <th>Queue Name</th>
-                <th># Messages</th>
+                <th>Message ID</th>
+                <th>Created DT</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
             <tr ng-repeat="object in objects">
                 <td>{{$index + 1}}</td>
-                <td>{{object.queueName}}</td>
-                <td>{{object.messageCount}}</td>
+                <td>{{object.messageId}}</td>
+                <td>{{object.creationDate}}</td>
                 <td>
-                    <a ng-click="messagesQueue(object)" href="">View Messages</a> |
-                    <a ng-click="purgeQueue(object)" href="">Purge</a> |
-                    <a ng-click="deleteQueue(object)" href="">Delete</a>
+                    <a ng-click="viewDetails(object)" href="">Details</a> |
+                    <a ng-click="deleteMessage(object)" href="">Delete</a>
                 </td>
             </tr>
         </tbody>

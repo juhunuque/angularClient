@@ -1,6 +1,6 @@
 var app = angular.module('dgApp',['ngRoute','ngAnimate','ui-notification', 'datatables']);
 
-app.config(['$routeProvider', '$httpProvider',function($routeProvider, $httpProvider){
+app.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider){
 
 
   $routeProvider
@@ -28,7 +28,7 @@ app.config(['$routeProvider', '$httpProvider',function($routeProvider, $httpProv
     templateUrl: 'js/html/amqOperations.view.html',
     controller: 'AmqOperationsCtrl'
 })
-.when('/amq/:queuename',{
+.when('/amq/messages',{
     templateUrl: 'js/html/amqMessagesQueue.view.html',
     controller: 'AmqMessagesQueueCtrl'
 })
@@ -36,7 +36,8 @@ app.config(['$routeProvider', '$httpProvider',function($routeProvider, $httpProv
     templateUrl: 'js/html/subscriptionOperations.view.html',
     controller: 'SubscriptionOperationsCtrl'
 })
-.otherwise({redirectTo: 'home'})
+.otherwise({redirectTo: 'home'});
+
 }
 ]);
 

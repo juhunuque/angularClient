@@ -24,8 +24,10 @@
                 <td>{{object.queueName}}</td>
                 <td>{{object.messageCount}}</td>
                 <td>
-                    <a ng-click="messagesQueue(object)" href="">View Messages</a> |
-                    <a ng-click="purgeQueue(object)" href="">Purge</a> |
+                    <span ng-show="object.messageCount == 0" class="grey-text">View Messages </span>
+                    <span ng-show="object.messageCount > 0"><a ng-click="goToMessages(object)" href="">View Messages </a></span> |
+                    <span ng-show="object.messageCount == 0" class="grey-text">Purge</span>
+                    <span ng-show="object.messageCount > 0"><a ng-click="purgeQueue(object)" href="">Purge</a></span> |
                     <a ng-click="deleteQueue(object)" href="">Delete</a>
                 </td>
             </tr>

@@ -1,6 +1,15 @@
 angular.module('dgApp')
 .factory('$dataDg', function(){
   var configs = {};
+  var amqQueue = {}
+
+  var getAmqQueue = function(){
+    return amqQueue;
+  };
+
+  var setAmqQueue = function(queue){
+    amqQueue = queue;
+  }
 
   var getConfig = function(){
     return configs;
@@ -12,7 +21,9 @@ angular.module('dgApp')
 
   return{
     getConfig: getConfig,
-    setConfigs: setConfigs
+    setConfigs: setConfigs,
+    getAmqQueue: getAmqQueue,
+    setAmqQueue: setAmqQueue
   }
 })
 
