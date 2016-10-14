@@ -19,6 +19,8 @@ angular.module("dgApp")
         configs = $dataDg.getConfig();
         $scope.objects = {};
         $scope.tableMsg = "Loading queues";
+        $scope.isLoading = false;
+        $scope.loadingMsg = '';
 
         $http.get('/queuelist').then(function(response){
                 $scope.objects = response.data.queues;
@@ -33,6 +35,8 @@ angular.module("dgApp")
 
     $scope.deleteQueue = function(queue){
         var queueName = queue.queueName;
+        $scope.loadingMsg = 'Removing ' + queueName;
+        $scope.isLoading = true;
         $http.post('/deletequeue',{
               'queuename': queueName
             }).then(function(response){
@@ -41,9 +45,11 @@ angular.module("dgApp")
                     $scope.objects.splice(i, 1);
                 }
                 Notification.success({title:'Success', message:'Queue ' + queueName + ' deleted.'});
+                $scope.isLoading = false;
            }, function(error){
              Notification.error({title:'Error', message:'Check the console and try again.'});
              console.error('ERROR => ' + JSON.stringify(error.data));
+             $scope.isLoading = false;
            });
 
     }

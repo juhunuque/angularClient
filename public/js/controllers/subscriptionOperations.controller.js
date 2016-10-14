@@ -20,6 +20,8 @@ angular.module("dgApp")
     configs = $dataDg.getConfig();
     $scope.subscriptions = {};
     $scope.tableMsg = "Loading subscriptions";
+    $scope.isLoading = false;
+    $scope.loadingMsg = '';
 
     $http.post('/routeget',{
     'url': configs.eventServiceConsumerProxy + '/subscriptions'
@@ -37,6 +39,8 @@ angular.module("dgApp")
 
   $scope.delete = function(subscription){
         var subscriptionId = $scope.getSubscriptionId(subscription._links.self.href);
+        $scope.loadingMsg = 'Removing ' + subscription.name;
+        $scope.isLoading = true;
         $http.post('/routedelete',{
           'url': configs.eventServiceConsumerProxy + '/subscriptions/' + subscriptionId
         }).then(function(response){
@@ -45,9 +49,12 @@ angular.module("dgApp")
                 $scope.subscriptions.splice(i, 1);
             }
             Notification.success({title:'Success', message:'Subscription removed.'});
+            $scope.isLoading = false;
+
        }, function(error){
          Notification.error({title:'Error', message:'Check the console and try again.'});
          console.error('ERROR => ' + JSON.stringify(error.data));
+         $scope.isLoading = false;
        });
      };
 
