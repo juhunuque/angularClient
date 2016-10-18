@@ -32,6 +32,10 @@ app.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpPro
     templateUrl: 'js/html/amqMessagesQueue.view.html',
     controller: 'AmqMessagesQueueCtrl'
 })
+.when('/amq/messages/details',{
+    templateUrl: 'js/html/messageDetails.view.html',
+    controller: 'MessageDetailsCtrl'
+})
 .when('/subscription',{
     templateUrl: 'js/html/subscriptionOperations.view.html',
     controller: 'SubscriptionOperationsCtrl'

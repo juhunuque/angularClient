@@ -24,7 +24,8 @@
         <thead>
             <tr>
                 <th>#</th>
-                <th>Message ID</th>
+                <th>Subscription</th>
+                <th>Guid</th>
                 <th>Created DT</th>
                 <th>Actions</th>
             </tr>
@@ -32,10 +33,11 @@
         <tbody>
             <tr ng-repeat="object in objects">
                 <td>{{$index + 1}}</td>
-                <td>{{object.messageId}}</td>
-                <td>{{object.creationDate}}</td>
+                <td>{{object.values.subscriptionName}}</td>
+                <td>{{object.values.guid}}</td>
+                <td>{{object.values.creationDate}}</td>
                 <td>
-                    <a ng-click="viewDetails(object)" href="">Details</a> |
+                    <a ng-click="goToDetails(object)" href="">Details</a> |
                     <a ng-click="deleteMessage(object)" href="">Delete</a>
                 </td>
             </tr>
@@ -50,6 +52,9 @@
                 <span>{{loadingMsg}}</span>
             </div>
             <wave-spinner></wave-spinner>
+            <div class="right-align">
+                <a href="" ng-click="hideLoading()">Hide</a>
+            </div>
         </div>
     </div>
 </div>

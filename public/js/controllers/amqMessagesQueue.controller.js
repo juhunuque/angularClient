@@ -1,9 +1,8 @@
 angular.module("dgApp")
 
-.controller('AmqMessagesQueueCtrl',['$scope','$http', '$routeParams', 'DTOptionsBuilder', 'Notification', '$dataDg',
-    function($scope, $http, $routeParams, DTOptionsBuilder, Notification, $dataDg){
+.controller('AmqMessagesQueueCtrl',['$scope','$http', '$routeParams', 'DTOptionsBuilder', 'Notification', '$dataDg', '$location',
+    function($scope, $http, $routeParams, DTOptionsBuilder, Notification, $dataDg, $location){
   var configs = {};
-  $scope.tableMsg = "Loading messages";
   $scope.queueName = $dataDg.getAmqQueue();
 
   $scope.dtOptions = DTOptionsBuilder.newOptions()
@@ -11,7 +10,7 @@ angular.module("dgApp")
       .withOption('bLengthChange', false)
       .withOption('scrollY', "500px")
       .withOption('scrollCollapse', true)
-      .withOption('oLanguage', {"sEmptyTable": $scope.tableMsg })
+      .withOption('oLanguage', {"sEmptyTable": "No data available" })
       .withOption('destroy', true)
       .withOption('autoWidth', true);
 
@@ -19,18 +18,17 @@ angular.module("dgApp")
 
       configs = $dataDg.getConfig();
       $scope.objects = {};
-      $scope.tableMsg = "Loading messages";
-      $scope.isLoading = false;
-      $scope.loadingMsg = '';
+      $scope.isLoading = true;
+      $scope.loadingMsg = 'Loading messages';
 
       $http.get('/queuemsgs?queuename='+$scope.queueName).then(function(response){
               $scope.objects = response.data.messages;
               Notification.success({title:'Success', message:'Messages loaded.'});
-              $scope.tableMsg = "No data available";
+              $scope.isLoading = false;
             }, function(error){
               Notification.error({title:'Error getting messages', message:'Check the console and try again.'});
-              $scope.tableMsg = "Error getting messages";
               console.error('ERROR => ' + JSON.stringify(error.data));
+              $scope.isLoading = false;
             });
   };
 
@@ -39,7 +37,7 @@ angular.module("dgApp")
     $scope.isLoading = true;
     $http.post('/deletemsg',{
           'queueName': $scope.queueName,
-          'messageId': message.messageId
+          'messageId': message.values.messageId
         }).then(function(response){
             var i = $scope.objects.indexOf(message);
             if(i != -1) {
@@ -52,6 +50,15 @@ angular.module("dgApp")
          console.error('ERROR => ' + JSON.stringify(error.data));
          $scope.isLoading = false;
        });
+  }
+
+  $scope.goToDetails = function(message){
+    $dataDg.setIdMessage({id:message.values.messageId, guid: message.values.guid});
+    $location.url('/amq/messages/details');
+  }
+
+  $scope.hideLoading = function(){
+      $scope.isLoading = false;
   }
 
     $scope.refresh();

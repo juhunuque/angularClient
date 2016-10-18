@@ -3,14 +3,13 @@ angular.module("dgApp")
 .controller('AmqOperationsCtrl',['$scope','$http', 'DTOptionsBuilder', 'Notification', '$dataDg', '$location',
     function($scope, $http, DTOptionsBuilder, Notification, $dataDg, $location){
   var configs = {};
-  $scope.tableMsg = "Loading queues";
 
   $scope.dtOptions = DTOptionsBuilder.newOptions()
       .withDisplayLength(10)
       .withOption('bLengthChange', false)
       .withOption('scrollY', "500px")
       .withOption('scrollCollapse', true)
-      .withOption('oLanguage', {"sEmptyTable": $scope.tableMsg })
+      .withOption('oLanguage', {"sEmptyTable": "No data available" })
       .withOption('destroy', true)
       .withOption('autoWidth', true);
 
@@ -18,18 +17,15 @@ angular.module("dgApp")
 
         configs = $dataDg.getConfig();
         $scope.objects = {};
-        $scope.tableMsg = "Loading queues";
         $scope.isLoading = true;
         $scope.loadingMsg = 'Loading queues';
 
         $http.get('/queuelist').then(function(response){
                 $scope.objects = response.data.queues;
                 Notification.success({title:'Success', message:'Queues loaded.'});
-                $scope.tableMsg = "No data available";
                 $scope.isLoading = false;
               }, function(error){
                 Notification.error({title:'Error getting queues', message:'Check the console and try again.'});
-                $scope.tableMsg = "Error getting queues";
                 console.error('ERROR => ' + JSON.stringify(error.data));
                 $scope.isLoading = false;
               });
@@ -72,6 +68,10 @@ angular.module("dgApp")
     $scope.goToMessages = function(queue){
         $dataDg.setAmqQueue(queue.queueName);
         $location.url('/amq/messages');
+    }
+
+    $scope.hideLoading = function(){
+        $scope.isLoading = false;
     }
 
     $scope.refresh();

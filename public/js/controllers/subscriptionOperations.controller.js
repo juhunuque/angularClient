@@ -3,7 +3,6 @@ angular.module("dgApp")
 .controller('SubscriptionOperationsCtrl',['$scope','$http', 'DTOptionsBuilder', 'Notification', '$dataDg', function($scope, $http, DTOptionsBuilder, Notification, $dataDg){
 
   var configs = {};
-  $scope.tableMsg = "Loading subscriptions";
 
   $scope.dtOptions = DTOptionsBuilder.newOptions()
       .withDisplayLength(10)
@@ -11,15 +10,12 @@ angular.module("dgApp")
       .withOption('scrollY', "500px")
       .withOption('scrollCollapse', true)
       .withOption('destroy', true)
-      .withOption('oLanguage', {"sEmptyTable": $scope.tableMsg })
+      .withOption('oLanguage', {"sEmptyTable": "No data available" })
       .withOption('autoWidth', true);
-
-
 
   $scope.refresh = function(){
     configs = $dataDg.getConfig();
     $scope.subscriptions = {};
-    $scope.tableMsg = "Loading subscriptions";
     $scope.isLoading = true;
     $scope.loadingMsg = 'Loading subscriptions';
 
@@ -28,11 +24,9 @@ angular.module("dgApp")
     }).then(function(response){
             $scope.subscriptions = response.data._embedded.subscriptions;
             Notification.success({title:'Success', message:'Subscriptions loaded.'});
-            $scope.tableMsg = "No data available";
             $scope.isLoading = false;
           }, function(error){
             Notification.error({title:'Error getting subscriptions', message:'Check the console and try again.'});
-            $scope.tableMsg = "Error getting subscriptions";
             console.error('ERROR => ' + JSON.stringify(error.data));
             $scope.isLoading = false;
           });
@@ -64,6 +58,10 @@ angular.module("dgApp")
     var split = subscription.split("/");
     return split[split.length - 1];
   };
+
+  $scope.hideLoading = function(){
+        $scope.isLoading = false;
+    }
 
   $scope.refresh();
 
