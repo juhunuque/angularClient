@@ -8,13 +8,6 @@
   <h3>AMQ Operations</h3>
 </div>
 
-<div ng-show="isLoading">
-  <div class="center-align">
-    <span>{{loadingMsg}}</span>
-  </div>
-  <wave-spinner></wave-spinner>
-</div>
-
 <div class="containerLimits">
   <table datatable="ng" dt-options="dtOptions" width="100%">
         <thead>
@@ -40,4 +33,15 @@
             </tr>
         </tbody>
     </table>
+</div>
+
+<div class="modal-window" ng-show="isLoading">
+    <div class="modal-content">
+        <div>
+            <div class="center-align">
+                <span>{{loadingMsg}}</span>
+            </div>
+            <wave-spinner></wave-spinner>
+        </div>
+    </div>
 </div>
