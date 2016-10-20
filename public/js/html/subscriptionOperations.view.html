@@ -28,7 +28,7 @@
                 <td>{{subscription.name}}</td>
                 <td>{{subscription.deliveryMethod.endpoint}}</td>
                 <td>
-                    <a ng-click="delete(subscription)" href="">Delete</a>
+                    <a ng-click="delete.confirm(subscription)" href="">Delete</a>
                 </td>
             </tr>
         </tbody>
@@ -44,6 +44,36 @@
             <wave-spinner></wave-spinner>
             <div class="right-align">
                 <a href="" ng-click="hideLoading()">Hide</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-window" ng-show="deleteConfirm">
+    <div class="modal-content">
+        <div>
+            <div class="center-align">
+                <h5>Are you sure to delete this subscription?</h5>
+            </div>
+            <div >
+                <span>Subscription: {{subscriptionName}}</span>
+            </div>
+            <div ng-show="redeliveryCount > 0 && !isSharedEndpoint">
+                <p>
+                    <input type="checkbox" id="chkRedelivery" ng-model="flushRedeliveryMsgs" />
+                    <label for="chkRedelivery">Remove {{redeliveryCount}} pending messages.</label>
+                </p>
+            </div>
+            <div ng-show="isSharedEndpoint">
+                <p>This subscription's endpoint is shared by other subscriptions.</p>
+                <p ng-show="redeliveryCount > 0">{{redeliveryCount}} pending messages will not be deleted.</p>
+            </div>
+            <div class="divider" style="margin-top:2%;margin-bottom:2%;"></div>
+            <div class="right-align">
+                <div class="row">
+                    <a class="btn blue darken-4" href="" ng-click="delete()">Confirm</a>
+                    <a class="btn-flat" href="" ng-click="delete.cancel()">Cancel</a>
+                </div>
             </div>
         </div>
     </div>

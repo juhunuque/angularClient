@@ -13,8 +13,16 @@
         <div class="col s12 m12">
             <div class="card blue-grey darken-1">
                 <div class="card-content white-text">
-                    <span class="card-title">{{title}}</span>
-                    <pre>{{objects | json}}</pre>
+                    <span class="card-title">Subscription: {{object.eventData.subscriptionName}}</span>
+                    <p>GUID: {{object.eventData.event.guid}}</p>
+                    <p>Business Id: {{object.eventData.event.businessId}}</p>
+                    <p>Type: {{object.eventData.event.type}}</p>
+                    <h6>Details:</h6>
+                    <pre>{{object.eventData.event.details | json}}</pre>
+                </div>
+                <div class="card-action">
+                    <a href="" ng-click="delete()">Delete</a>
+                    <a href="" ng-click="goBack()">Back</a>
                 </div>
             </div>
         </div>

@@ -22,22 +22,22 @@ angular.module("dgApp")
       $scope.loadingMsg = 'Loading messages';
 
       $http.get('/queuemsgs?queuename='+$scope.queueName).then(function(response){
-              $scope.objects = response.data.messages;
-              Notification.success({title:'Success', message:'Messages loaded.'});
-              $scope.isLoading = false;
-            }, function(error){
-              Notification.error({title:'Error getting messages', message:'Check the console and try again.'});
-              console.error('ERROR => ' + JSON.stringify(error.data));
-              $scope.isLoading = false;
-            });
+          $scope.objects = response.data.messages;
+          Notification.success({title:'Success', message:'Messages loaded.'});
+          $scope.isLoading = false;
+        }, function(error){
+          Notification.error({title:'Error getting messages', message:'Check the console and try again.'});
+          console.error('ERROR => ' + JSON.stringify(error.data));
+          $scope.isLoading = false;
+        });
   };
 
   $scope.deleteMessage = function(message){
     $scope.loadingMsg = 'Removing message.';
     $scope.isLoading = true;
     $http.post('/deletemsg',{
-          'queueName': $scope.queueName,
-          'messageId': message.values.messageId
+          'queuename': $scope.queueName,
+          'messageid': message.values.messageId
         }).then(function(response){
             var i = $scope.objects.indexOf(message);
             if(i != -1) {

@@ -1,4 +1,4 @@
-var app = angular.module('dgApp',['ngRoute', 'ngAnimate', 'ui-notification', 'datatables', 'angular-spinkit']);
+var app = angular.module('dgApp',['ngRoute', 'ngAnimate', 'ui-notification', 'datatables', 'angular-spinkit', 'ngLodash']);
 
 app.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider){
 
