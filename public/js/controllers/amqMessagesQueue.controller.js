@@ -6,7 +6,7 @@ angular.module("dgApp")
   $scope.queueName = $dataDg.getAmqQueue();
 
   $scope.dtOptions = DTOptionsBuilder.newOptions()
-      .withDisplayLength(10)
+      .withDisplayLength(50)
       .withOption('bLengthChange', false)
       .withOption('scrollY', "500px")
       .withOption('scrollCollapse', true)

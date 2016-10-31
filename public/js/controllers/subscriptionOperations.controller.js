@@ -6,7 +6,7 @@ angular.module("dgApp")
   var selectedSubscription = {};
 
   $scope.dtOptions = DTOptionsBuilder.newOptions()
-      .withDisplayLength(10)
+      .withDisplayLength(50)
       .withOption('bLengthChange', false)
       .withOption('scrollY', "500px")
       .withOption('scrollCollapse', true)
@@ -67,10 +67,9 @@ angular.module("dgApp")
      $scope.delete.confirm = function(subscription){
          $scope.redeliveryCount = 0;
          $scope.subscriptionName = subscription.name;
-         $scope.loadingMsg = 'Getting subscription info.';
-         $scope.isLoading = true;
          selectedSubscription = subscription;
          $http.get('/redeliverymessagecount?subscriptionname='+$scope.subscriptionName).then(function(response){
+            console.log('COUNT => ', response.data);
            $scope.redeliveryCount = response.data;
            if(isSharedEndpoint(subscription.deliveryMethod.endpoint)){
               $scope.isSharedEndpoint = true;

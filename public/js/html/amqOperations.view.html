@@ -5,7 +5,7 @@
 </div>
 
 <div class="container center-align">
-  <h3>AMQ Operations</h3>
+  <h4>AMQ Operations</h4>
 </div>
 
 <div class="containerLimits">
@@ -27,8 +27,8 @@
                     <span ng-show="object.messageCount == 0" class="grey-text">View Messages </span>
                     <span ng-show="object.messageCount > 0"><a ng-click="goToMessages(object)" href="">View Messages </a></span> |
                     <span ng-show="object.messageCount == 0" class="grey-text">Purge</span>
-                    <span ng-show="object.messageCount > 0"><a ng-click="purgeQueue(object)" href="">Purge</a></span> |
-                    <a ng-click="deleteQueue(object)" href="">Delete</a>
+                    <span ng-show="object.messageCount > 0"><a ng-click="purgeQueue.confirm(object)" href="">Purge</a></span> |
+                    <a ng-click="deleteQueue.confirm(object)" href="">Delete</a>
                 </td>
             </tr>
         </tbody>
@@ -44,6 +44,48 @@
             <wave-spinner></wave-spinner>
             <div class="right-align">
                 <a href="" ng-click="hideLoading()">Hide</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-window" ng-show="deleteConfirm">
+    <div class="modal-content">
+        <div>
+            <div class="center-align">
+                <h5>Are you sure to delete this queue?</h5>
+            </div>
+            <div >
+                <span>Queue: {{queueName}}</span>
+            </div>
+
+            <div class="divider" style="margin-top:2%;margin-bottom:2%;"></div>
+            <div class="right-align">
+                <div class="row">
+                    <a class="btn blue darken-4" href="" ng-click="deleteQueue()">Confirm</a>
+                    <a class="btn-flat" href="" ng-click="clean()">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-window" ng-show="purgeConfirm">
+    <div class="modal-content">
+        <div>
+            <div class="center-align">
+                <h5>Are you sure to purge this queue?</h5>
+            </div>
+            <div >
+                <span>Queue: {{queueName}}</span>
+            </div>
+
+            <div class="divider" style="margin-top:2%;margin-bottom:2%;"></div>
+            <div class="right-align">
+                <div class="row">
+                    <a class="btn blue darken-4" href="" ng-click="purgeQueue()">Confirm</a>
+                    <a class="btn-flat" href="" ng-click="clean()">Cancel</a>
+                </div>
             </div>
         </div>
     </div>

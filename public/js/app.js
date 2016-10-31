@@ -47,11 +47,13 @@ app.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpPro
 
 app.run(function ($rootScope, $location, $http, $dataDg) {
   $rootScope.$on('$routeChangeStart', function(event, next, current) {
-       $http.get('/config').then(function(response){
-        $dataDg.setConfigs(response.data);
-      }, function(error){
-        console.error('ERROR GETTING CONFIGS => ' + JSON.stringify(error.data));
-      });
+        if(angular.equals($dataDg.getConfig(), {})){
+            $http.get('/config').then(function(response){
+                    $dataDg.setConfigs(response.data);
+                  }, function(error){
+                    console.error('ERROR GETTING CONFIGS => ' + JSON.stringify(error.data));
+                  });
+        }
     });
 
   });
