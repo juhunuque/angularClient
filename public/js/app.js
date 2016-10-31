@@ -40,6 +40,10 @@ app.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpPro
     templateUrl: 'js/html/subscriptionOperations.view.html',
     controller: 'SubscriptionOperationsCtrl'
 })
+.when('/runTests',{
+    templateUrl: 'js/html/runTests.view.html',
+    controller: 'RunTestsCtrl'
+})
 .otherwise({redirectTo: 'home'});
 
 }
@@ -48,11 +52,11 @@ app.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpPro
 app.run(function ($rootScope, $location, $http, $dataDg) {
   $rootScope.$on('$routeChangeStart', function(event, next, current) {
         if(angular.equals($dataDg.getConfig(), {})){
-            $http.get('/config').then(function(response){
-                    $dataDg.setConfigs(response.data);
-                  }, function(error){
-                    console.error('ERROR GETTING CONFIGS => ' + JSON.stringify(error.data));
-                  });
+            // $http.get('/config').then(function(response){
+            //         $dataDg.setConfigs(response.data);
+            //       }, function(error){
+            //         console.error('ERROR GETTING CONFIGS => ' + JSON.stringify(error.data));
+            //       });
         }
     });
 

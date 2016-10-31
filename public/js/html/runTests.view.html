@@ -1,0 +1,62 @@
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large waves-effect waves-light blue darken-4" ng-click="runTests()" ng-disabled="isRunning" >
+      <i class="large material-icons">play_arrow</i>
+    </a>
+</div>
+
+<div class="container center-align">
+  <h3>Run tests</h3>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col s12 m12 l12">
+      <div class="card">
+        <div class="card-content ">
+          <span class="card-title">Test Information</span>
+          <table class="striped">
+
+            <tbody>
+              <tr>
+                <td>
+                  Status: <span ng-class="getTextColor(statusMsg)">{{statusMsg}}</span>.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Last test status: <span ng-class="getTextColor(lastStatus)">{{lastStatus}}</span>.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Last test date: {{lastDt}}.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Space: {{space}}.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div ng-show="isRunning">
+    <div class="center-align">
+        <span>Running tests</span>
+    </div>
+    <wave-spinner></wave-spinner>
+</div>
+
+<div class="container">
+  Console output:
+  <pre>
+    {{consoleOutput}}
+  </pre>
+</div>
