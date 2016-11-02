@@ -18,9 +18,6 @@ angular.module("dgApp")
     isServerAvailable();
   }
 
-  $scope.printtest = function(){
-    console.log('CONSOLE => ', $scope.isConsoleActive);
-  }
 
   $scope.getTextColor = function(item){
     switch (item.toLowerCase()) {
@@ -54,9 +51,8 @@ angular.module("dgApp")
       $scope.lastStatus = 'Running';
 
       setTimeout(function(){
-        console.log('PRINT');
         getServerStatus();
-      }, 11000);
+      }, 12000);
       }, function(error){
         Notification.error({title:'Error', message:'Check the console and try again.'});
         console.error('ERROR => ' + JSON.stringify(error.data));
@@ -78,6 +74,9 @@ angular.module("dgApp")
           }, function(error){
             Notification.error({title:'Error', message:'Check the console and try again.'});
             console.error('ERROR => ' + JSON.stringify(error.data));
+            $scope.isAvailable = false;
+            $scope.statusMsg = 'Server not available';
+            $scope.lastStatus = 'Error';
           });
   }
 
