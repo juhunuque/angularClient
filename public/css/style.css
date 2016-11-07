@@ -55,3 +55,16 @@ main {
 .dropdown-menu-text{
     color: #003A5E;
 }
+
+.justify{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.box-title-font-size{
+  font-size: 14pt;
+}
+
+.box-link-font-size{
+  font-size: 10pt;
+}
