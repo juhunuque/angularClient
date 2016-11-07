@@ -47,7 +47,7 @@ angular.module("dgApp")
 
     function makeRequest(endpoint){
         $http.post('/routeget',{
-        'url': configs.eventService + endpoint
+        'url': configs.eventServiceConsumerProxy + endpoint
         }).then(function(response){
                 $scope.body = response.data;
               }, function(error){

@@ -19,12 +19,15 @@
 </head>
 <body ng-app="dgApp">
     <header>
-        <ul id="dropdownStatus" class="dropdown-content">
-          <li><a href="#/statusES">Event Service</a></li>
-          <li><a href="#/statusCP">Consumer Proxy</a></li>
-          <li><a href="#/statusMonitor">Monitor</a></li>
-          <li><a href="#/statusAdmin">Administrator</a></li>
-        </ul>
+      <ul id="dropdownStatus" class="dropdown-content">
+        <li><a href="#/statusES">Event Service</a></li>
+        <li><a href="#/statusCP">Consumer Proxy</a></li>
+        <li><a href="#/statusMonitor">Monitor</a></li>
+        <li><a href="#/statusAdmin">Administrator</a></li>
+      </ul>
+      <ul id="dropdownInternal" class="dropdown-content">
+        <li><a href="#/internalEnv">Environment</a></li>
+      </ul>
       <nav style="background-color: #003A5E;" role="navigation">
         <div class="nav-wrapper container">
             <a id="logo-container" href="#/home" class="brand-logo" style="margin-top: -2%">
@@ -36,9 +39,15 @@
               <li><a href="#/subscription">Subscriptions</a></li>
               <li><a href="#/runTests">Run Tests</a></li>
               <li>
-                  <a class="dropdown-button" href="#!" data-beloworigin="true" data-hover="true"
+                  <a class="dropdown-button" href="" data-beloworigin="true" data-hover="true"
                       data-constrainwidth="false" data-activates="dropdownStatus">
                       Status<i class="material-icons right">arrow_drop_down</i>
+                  </a>
+              </li>
+              <li>
+                  <a class="dropdown-button" href="" data-beloworigin="true" data-hover="true"
+                      data-constrainwidth="false" data-activates="dropdownInternal">
+                      Internal<i class="material-icons right">arrow_drop_down</i>
                   </a>
               </li>
           </ul>
@@ -89,5 +98,6 @@
   <script src="js/controllers/amqMessagesQueue.controller.js"></script>
   <script src="js/controllers/messageDetails.controller.js"></script>
   <script src="js/controllers/runTests.controller.js"></script>
+  <script src="js/controllers/internalEnvironment.controller.js"></script>
   </body>
 </html>

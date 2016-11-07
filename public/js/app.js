@@ -44,6 +44,10 @@ app.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpPro
     templateUrl: 'js/html/runTests.view.html',
     controller: 'RunTestsCtrl'
 })
+.when('/internalEnv',{
+    templateUrl: 'js/html/internalEnvironment.view.html',
+    controller: 'InternalEnvCtrl'
+})
 .otherwise({redirectTo: 'home'});
 
 }
