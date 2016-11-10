@@ -1,11 +1,14 @@
 angular.module("dgApp")
 
-.controller('InternalEnvCtrl',['$scope','$http','$dataDg', 'Notification', function($scope, $http, $dataDg, Notification){
+.controller('InternalEnvCtrl',['$scope','$http','$dataDg', 'Notification', 'lodash', function($scope, $http, $dataDg, Notification, lodash){
 
   var configs = {};
+  var body = {};
   function refresh(){
+    $scope.searchText = '';
     $scope.title = '';
     $scope.body = '';
+    body = {};
     $scope.isStatusFormActive = false;
     configs = $dataDg.getConfig();
   };
@@ -52,12 +55,20 @@ angular.module("dgApp")
       'url': url + endpoint
       }).then(function(response){
               $scope.body = response.data;
+              body = response.data;
             }, function(error){
               $scope.body = 'Error requesting data.';
               Notification.error({title:'Error', message:'Check the console and try again.'});
               console.error('ERROR => ' + JSON.stringify(error.data));
             });
   };
+
+    $scope.search = function(){
+      $scope.body = body;
+      if(lodash.has($scope.body, $scope.searchText)){
+        $scope.body = body[$scope.searchText];
+      }
+    }
 
   refresh();
 

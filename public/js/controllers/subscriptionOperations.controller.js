@@ -99,8 +99,9 @@ angular.module("dgApp")
   }
 
   $scope.hideLoading = function(){
-        $scope.isLoading = false;
-    }
+      $scope.isLoading = false;
+  }
+
 
   $scope.refresh();
 

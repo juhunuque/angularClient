@@ -22,7 +22,15 @@
     <div class="col s12 m12">
       <div class="card blue-grey darken-1">
         <div class="card-content white-text">
-          <span class="card-title">{{title}}</span>
+          <div class="row">
+            <span class="card-title left">{{title}}</span>
+            <div class="right">
+              <div class="input-field">
+                <input  id="searchBar" type="text" ng-model="searchText" ng-change="search()">
+                <label for="searchBar">Search</label>
+              </div>
+            </div>
+          </div>
           <pre>{{body | json}}</pre>
         </div>
         <div class="card-action">
