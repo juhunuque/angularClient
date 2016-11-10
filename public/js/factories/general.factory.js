@@ -38,4 +38,19 @@ angular.module('dgApp')
   }
 })
 
+.factory('$utils', function(){
+  var jsonToArray = function(json, header, objects){
+    for (var i in json) {
+        if (!!json[i] && typeof(json[i])=="object") {
+            jsonToArray(json[i],i, objects);
+        }else{
+          objects.push({key: header + '.' + i, value: json[i]});
+        }
+    }
+    return objects;
+  }
 
+  return{
+    jsonToArray: jsonToArray
+  }
+})

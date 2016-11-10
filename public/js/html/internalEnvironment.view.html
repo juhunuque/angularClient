@@ -22,16 +22,27 @@
     <div class="col s12 m12">
       <div class="card blue-grey darken-1">
         <div class="card-content white-text">
-          <div class="row">
-            <span class="card-title left">{{title}}</span>
-            <div class="right">
-              <div class="input-field">
-                <input  id="searchBar" type="text" ng-model="searchText" ng-change="search()">
-                <label for="searchBar">Search</label>
-              </div>
-            </div>
+          <span class="card-title">{{title}}</span>
+
+          <div class="containerLimits">
+            <table datatable="ng" dt-options="dtOptions" width="100%">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Properties</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="object in objects">
+                        <td>{{$index + 1}}</td>
+                        <td>{{object.key}}</td>
+                        <td>{{object.value}}</td>
+                    </tr>
+                </tbody>
+            </table>
           </div>
-          <pre>{{body | json}}</pre>
+
         </div>
         <div class="card-action">
           <a href="" ng-click="toggleStatusForm()">Close</a>

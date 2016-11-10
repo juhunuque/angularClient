@@ -1,14 +1,22 @@
 angular.module("dgApp")
 
-.controller('InternalEnvCtrl',['$scope','$http','$dataDg', 'Notification', 'lodash', function($scope, $http, $dataDg, Notification, lodash){
+.controller('InternalEnvCtrl',['$scope','$http','$dataDg', 'Notification', 'DTOptionsBuilder', '$utils', function($scope, $http, $dataDg, Notification, DTOptionsBuilder, $utils){
+
+  $scope.dtOptions = DTOptionsBuilder.newOptions()
+      .withDisplayLength(50)
+      .withOption('bLengthChange', false)
+      .withOption('scrollY', "500px")
+      .withOption('scrollCollapse', true)
+      .withOption('destroy', true)
+      .withOption('oLanguage', {"sEmptyTable": "No data available" })
+      .withOption('autoWidth', true);
 
   var configs = {};
-  var body = {};
+
   function refresh(){
     $scope.searchText = '';
+    $scope.objects = {}; 
     $scope.title = '';
-    $scope.body = '';
-    body = {};
     $scope.isStatusFormActive = false;
     configs = $dataDg.getConfig();
   };
@@ -54,21 +62,14 @@ angular.module("dgApp")
       $http.post('/routeget',{
       'url': url + endpoint
       }).then(function(response){
-              $scope.body = response.data;
-              body = response.data;
+              $scope.objects = $utils.jsonToArray(response.data,null,[]);
             }, function(error){
-              $scope.body = 'Error requesting data.';
               Notification.error({title:'Error', message:'Check the console and try again.'});
               console.error('ERROR => ' + JSON.stringify(error.data));
             });
   };
 
-    $scope.search = function(){
-      $scope.body = body;
-      if(lodash.has($scope.body, $scope.searchText)){
-        $scope.body = body[$scope.searchText];
-      }
-    }
+  // $scope.objects = $utils.jsonToArray($scope.body,null,[]);
 
   refresh();
 
