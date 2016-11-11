@@ -6,16 +6,14 @@ angular.module("dgApp")
       .withDisplayLength(50)
       .withOption('bLengthChange', false)
       .withOption('scrollY', "500px")
-      .withOption('scrollCollapse', true)
+      .withOption('scrollCollapse', false)
       .withOption('destroy', true)
-      .withOption('oLanguage', {"sEmptyTable": "No data available" })
-      .withOption('autoWidth', true);
+      .withOption('oLanguage', {"sEmptyTable": "No data available" });
 
   var configs = {};
 
   function refresh(){
-    $scope.searchText = '';
-    $scope.objects = {}; 
+    $scope.objects = {};
     $scope.title = '';
     $scope.isStatusFormActive = false;
     configs = $dataDg.getConfig();
@@ -63,13 +61,13 @@ angular.module("dgApp")
       'url': url + endpoint
       }).then(function(response){
               $scope.objects = $utils.jsonToArray(response.data,null,[]);
+              Notification.success({title:'Success', message:'Data loaded.'});
             }, function(error){
               Notification.error({title:'Error', message:'Check the console and try again.'});
               console.error('ERROR => ' + JSON.stringify(error.data));
             });
   };
 
-  // $scope.objects = $utils.jsonToArray($scope.body,null,[]);
 
   refresh();
 
