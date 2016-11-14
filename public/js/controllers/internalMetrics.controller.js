@@ -67,18 +67,34 @@ angular.module("dgApp")
           });
     };
 
-    function makeChart(freeMem, usedMem){
-      $scope.totalMemory = "Total memory: " + (freeMem + usedMem);
-      $scope.pieData = [{
-              name: "Used",
-              y: usedMem
-          }, {
-              name: "Free",
-              y: freeMem,
-              sliced: true
-          }];
-    }
+    function makeChart(freeMem, totalMem){
+        $scope.chartConfig = {
+          options: {
+              chart: {
+                  type: 'pie'
+              }
+          },
+          series: [{
+            name: 'Memory',
+              data: [{
+                name: 'Used',
+                y: totalMem - freeMem
+              },{
+                name: 'Free',
+                y: freeMem,
+                sliced: true
+              }]
+          }],
+          title: {
+              text: 'Memory usage'
+          },
+          subtitle:{
+            text: 'Total Memory: ' + totalMem
+          },
 
+          loading: false
+      }
+    }
 
 
     refresh();
