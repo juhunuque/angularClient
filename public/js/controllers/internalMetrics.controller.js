@@ -5,13 +5,11 @@ angular.module("dgApp")
     $scope.dtOptions = DTOptionsBuilder.newOptions()
         .withDisplayLength(50)
         .withOption('bLengthChange', false)
-        .withOption('scrollY', "500px")
-        .withOption('scrollCollapse', false)
         .withOption('destroy', true)
+        .withOption('autoWidth', true)
         .withOption('oLanguage', {"sEmptyTable": "No data available" });
 
     var configs = {};
-
     function refresh(){
       $scope.objects = {};
       $scope.title = '';
@@ -60,13 +58,27 @@ angular.module("dgApp")
         $http.post('/routeget',{
         'url': url + endpoint
         }).then(function(response){
-                $scope.objects = $utils.jsonToArray(response.data,null,[]);
-                Notification.success({title:'Success', message:'Data loaded.'});
-              }, function(error){
-                Notification.error({title:'Error', message:'Check the console and try again.'});
-                console.error('ERROR => ' + JSON.stringify(error.data));
-              });
+            $scope.objects = $utils.jsonToArray(response.data,null,[]);
+            makeChart(100, 200);
+            Notification.success({title:'Success', message:'Data loaded.'});
+          }, function(error){
+            Notification.error({title:'Error', message:'Check the console and try again.'});
+            console.error('ERROR => ' + JSON.stringify(error.data));
+          });
     };
+
+    function makeChart(freeMem, usedMem){
+      $scope.totalMemory = "Total memory: " + (freeMem + usedMem);
+      $scope.pieData = [{
+              name: "Used",
+              y: usedMem
+          }, {
+              name: "Free",
+              y: freeMem,
+              sliced: true
+          }];
+    }
+
 
 
     refresh();
