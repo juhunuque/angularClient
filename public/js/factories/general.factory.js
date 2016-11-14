@@ -44,7 +44,7 @@ angular.module('dgApp')
         if (!!json[i] && typeof(json[i])=="object") {
             jsonToArray(json[i],i, objects);
         }else{
-          objects.push({key: header + '.' + i, value: json[i]});
+          objects.push({key: (header == null ? '' : header + '.') + i, value: json[i]});
         }
     }
     return objects;
