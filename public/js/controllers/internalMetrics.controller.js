@@ -59,7 +59,18 @@ angular.module("dgApp")
         'url': url + endpoint
         }).then(function(response){
             $scope.objects = $utils.jsonToArray(response.data,null,[]);
-            makeChart(100, 200);
+            $scope.chartMemConfig = makeChart(response.data["mem.free"], (response.data.mem-response.data["mem.free"]), response.data.mem, {
+                title: 'Memory usage',
+                subtitle: 'Total memory: ',
+                seriesName: 'Memory'
+            });
+
+            $scope.chartHeapConfig = makeChart((response.data.heap-response.data["heap.used"]),response.data["heap.used"], response.data.heap, {
+                 title: 'Heap usage',
+                 subtitle: 'Total heap: ',
+                 seriesName: 'Heap'
+             });
+
             Notification.success({title:'Success', message:'Data loaded.'});
           }, function(error){
             Notification.error({title:'Error', message:'Check the console and try again.'});
@@ -67,18 +78,18 @@ angular.module("dgApp")
           });
     };
 
-    function makeChart(freeMem, totalMem){
-        $scope.chartConfig = {
+    function makeChart(freeMem, usedMem, totalMem, text){
+        var chart = {
           options: {
               chart: {
                   type: 'pie'
               }
           },
           series: [{
-            name: 'Memory',
+            name: text.seriesName,
               data: [{
                 name: 'Used',
-                y: totalMem - freeMem
+                y: usedMem
               },{
                 name: 'Free',
                 y: freeMem,
@@ -86,14 +97,16 @@ angular.module("dgApp")
               }]
           }],
           title: {
-              text: 'Memory usage'
+              text: text.title
           },
           subtitle:{
-            text: 'Total Memory: ' + totalMem
+            text: text.subtitle + totalMem
           },
 
           loading: false
-      }
+      };
+
+      return chart;
     }
 
 
