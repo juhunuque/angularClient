@@ -52,6 +52,10 @@ app.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpPro
     templateUrl: 'js/html/internalMetrics.view.html',
     controller: 'InternalMetricCtrl'
 })
+.when('/internalDump',{
+    templateUrl: 'js/html/internalDump.view.html',
+    controller: 'InternalDumpCtrl'
+})
 .otherwise({redirectTo: 'home'});
 
 }

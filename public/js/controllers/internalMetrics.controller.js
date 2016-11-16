@@ -59,13 +59,13 @@ angular.module("dgApp")
         'url': url + endpoint
         }).then(function(response){
             $scope.objects = $utils.jsonToArray(response.data,null,[]);
-            $scope.chartMemConfig = makeChart(response.data["mem.free"], (response.data.mem-response.data["mem.free"]), response.data.mem, {
+            $scope.chartMemConfig = buildPieChart(response.data["mem.free"], (response.data.mem-response.data["mem.free"]), response.data.mem, {
                 title: 'Memory usage',
                 subtitle: 'Total memory: ',
                 seriesName: 'Memory'
             });
 
-            $scope.chartHeapConfig = makeChart((response.data.heap-response.data["heap.used"]),response.data["heap.used"], response.data.heap, {
+            $scope.chartHeapConfig = buildPieChart((response.data.heap-response.data["heap.used"]),response.data["heap.used"], response.data.heap, {
                  title: 'Heap usage',
                  subtitle: 'Total heap: ',
                  seriesName: 'Heap'
@@ -78,7 +78,7 @@ angular.module("dgApp")
           });
     };
 
-    function makeChart(freeMem, usedMem, totalMem, text){
+    function buildPieChart(freeMem, usedMem, totalMem, text){
         var chart = {
           options: {
               chart: {
