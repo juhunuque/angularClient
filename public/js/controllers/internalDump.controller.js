@@ -169,4 +169,5 @@ function buildBarChart(dataArray, totalThreads){
     return chart;
 }
 
+refresh();
 }]);
