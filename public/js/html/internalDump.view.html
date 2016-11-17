@@ -25,9 +25,17 @@
           <span class="card-title">{{title}}</span>
 
           <div class="row">
-            <highchart  style="width: 100%;  height: 500px;" config="chartConfig"></highchart>
+            <div class="row center-align">
+              <span>Threads - Real Time</span>
+            </div>
+            <canvas class="chart-horizontal-bar"
+              chart-data="threadChart.data" chart-labels="threadChart.labels" chart-options="threadChart.options" >
+            </canvas>
           </div>
 
+          <div class="row right-align">
+            <span style="font-size: 10pt;color:#666666"># Threads</span>
+          </div>
           <div class="row center-align">
             <span>In Native Threads: {{inNativeQty}} - No Native Threads: {{noNativeQty}}</span>
           </div>

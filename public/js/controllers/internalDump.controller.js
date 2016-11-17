@@ -17,6 +17,7 @@ angular.module("dgApp")
     configs = $dataDg.getConfig();
     $scope.inNativeQty = 0;
     $scope.noNativeQty = 0;
+    $scope.threadChart = [];
   };
 
   $scope.toggleStatusForm = function(){
@@ -60,8 +61,8 @@ angular.module("dgApp")
       'url': url + endpoint
       }).then(function(response){
           var processedData = processData(response.data, [], existsInList);
-          $scope.chartConfig = buildBarChart(buildBarChartArray(processedData), response.data.length);
           $scope.objects = buildTableArray(processedData);
+          buildBarChart(processedData, response.data.length);
 
           Notification.success({title:'Success', message:'Data loaded.'});
         }, function(error){
@@ -69,17 +70,6 @@ angular.module("dgApp")
           console.error('ERROR => ' + JSON.stringify(error.data));
         });
   };
-
-  function buildBarChartArray(dataArray){
-    var result = [];
-    var keys = Object.keys(dataArray);
-    keys.map(function(object, index){
-      result.push({name: object,
-        data: [dataArray[object]]
-      })
-    })
-    return result;
-  }
 
   function buildTableArray(dataArray){
     var objects = [];
@@ -95,7 +85,6 @@ angular.module("dgApp")
     var noNative = 0;
     array.map(function(object,index){
       var item = object.threadName.substring(0,15);
-      console.log(inNative);
       if(object.inNative){
         inNative++;
       }else{
@@ -122,51 +111,25 @@ angular.module("dgApp")
     return false;
   }
 
+
+
 function buildBarChart(dataArray, totalThreads){
-  var chart = {
-    options: {
-        chart: {
-            type: 'bar'
-        }
-      },
-        title: {
-            text: 'Threads'
-        },
-        subtitle: {
-            text: 'Number of total threads: ' + totalThreads
-        },
-        xAxis: {
-            categories: ['Thread'],
-            title: {
-                text: null
-            }
-        },
-        yAxis: {
-            min: 0,
-            title: {
-                text: '# Threads',
-                align: 'high'
-            },
-            labels: {
-                overflow: 'justify'
-            }
-        },
+  $scope.threadChart.labels = [];
+  $scope.threadChart.data = [];
+  var keys = Object.keys(dataArray);
+  keys.map(function(object, index){
+    $scope.threadChart.labels.push(object);
+    $scope.threadChart.data.push(dataArray[object]);
 
-        legend: {
-            layout: 'vertical',
-            align: 'right',
-            verticalAlign: 'top',
-            x: -40,
-            y: 80,
-            floating: true,
-            borderWidth: 1,
-            shadow: true
-        },
+  })
 
-        series: dataArray
-    };
-
-    return chart;
+  $scope.threadChart.options = {
+    title: {
+     display: true,
+     fontSize: 14,
+     text: 'Total Threads: ' + totalThreads
+   }
+ };
 }
 
 refresh();

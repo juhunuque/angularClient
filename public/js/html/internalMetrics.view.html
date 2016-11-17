@@ -27,15 +27,26 @@
           <div class="row">
             <div class="col s4 m4 l4">
               <div>
-                <highchart style="width: 350px; margin: 0 auto; height: 300px;" config="chartMemConfig"></highchart>
+                <div class="row center-align">
+                  <span>Memory - Real Time</span>
+                </div>
+                <canvas class="chart chart-pie"
+                  chart-data="memory.data" chart-labels="memory.labels" chart-options="memory.options" chart-colors="memory.chartColors">
+                </canvas>
               </div>
             </div>
               <div class="offset-l3 col s4 m4 l4">
                   <div>
-                      <highchart style="width: 350px; margin: 0 auto; height: 300px;" config="chartHeapConfig"></highchart>
+                    <div class="row center-align">
+                      <span>Heap - Real Time</span>
+                    </div>
+                    <canvas class="chart chart-pie"
+                      chart-data="heap.data" chart-labels="heap.labels" chart-options="heap.options" chart-colors="heap.chartColors">
+                    </canvas>
                   </div>
               </div>
           </div>
+
 
           <div class="containerLimits">
             <table datatable="ng" dt-options="dtOptions" width="100%">

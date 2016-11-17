@@ -15,6 +15,9 @@ angular.module("dgApp")
       $scope.title = '';
       $scope.isStatusFormActive = false;
       configs = $dataDg.getConfig();
+
+      $scope.memory = [];
+      $scope.heap = [];
     };
 
 
@@ -58,18 +61,9 @@ angular.module("dgApp")
         $http.post('/routeget',{
         'url': url + endpoint
         }).then(function(response){
-            $scope.objects = $utils.jsonToArray(response.data,null,[]);
-            $scope.chartMemConfig = buildPieChart(response.data["mem.free"], (response.data.mem-response.data["mem.free"]), response.data.mem, {
-                title: 'Memory usage',
-                subtitle: 'Total memory: ',
-                seriesName: 'Memory'
-            });
-
-            $scope.chartHeapConfig = buildPieChart((response.data.heap-response.data["heap.used"]),response.data["heap.used"], response.data.heap, {
-                 title: 'Heap usage',
-                 subtitle: 'Total heap: ',
-                 seriesName: 'Heap'
-             });
+          $scope.objects = $utils.jsonToArray(response.data,null,[]);
+           buildMemChart(response.data["mem.free"], (response.data.mem-response.data["mem.free"]), response.data.mem);
+           buildHeapChart((response.data.heap-response.data["heap.used"]),response.data["heap.used"], response.data.heap);
 
             Notification.success({title:'Success', message:'Data loaded.'});
           }, function(error){
@@ -78,37 +72,39 @@ angular.module("dgApp")
           });
     };
 
-    function buildPieChart(freeMem, usedMem, totalMem, text){
-        var chart = {
-          options: {
-              chart: {
-                  type: 'pie'
-              }
-          },
-          series: [{
-            name: text.seriesName,
-              data: [{
-                name: 'Used',
-                y: usedMem
-              },{
-                name: 'Free',
-                y: freeMem,
-                sliced: true
-              }]
-          }],
-          title: {
-              text: text.title
-          },
-          subtitle:{
-            text: text.subtitle + totalMem
-          },
-
-          loading: false
-      };
-
-      return chart;
+    function buildMemChart(free, used, total){
+      $scope.memory.labels = ["Free", "Used"];
+      $scope.memory.chartColors = ['#7CB5EC', '#434348'];
+      $scope.memory.data = [free, used];
+      $scope.memory.options = {
+        title: {
+         display: true,
+         fontSize: 14,
+         text: 'Total memory: ' + total
+       },
+       legend: {
+           display: true,
+           position: 'bottom'
+       }
+     };
     }
 
+    function buildHeapChart(free, used, total){
+      $scope.heap.labels = ["Free", "Used"];
+      $scope.heap.chartColors = ['#7CB5EC', '#434348'];
+      $scope.heap.data = [free, used];
+      $scope.heap.options = {
+        title: {
+         display: true,
+         fontSize: 14,
+         text: 'Total heap: ' + total
+       },
+       legend: {
+           display: true,
+           position: 'bottom'
+       }
+     };
+    }
 
     refresh();
 }]);
