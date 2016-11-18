@@ -18,6 +18,7 @@ angular.module("dgApp")
     $scope.inNativeQty = 0;
     $scope.noNativeQty = 0;
     $scope.threadChart = [];
+    $scope.isLoading = false;
   };
 
   $scope.toggleStatusForm = function(){
@@ -25,6 +26,8 @@ angular.module("dgApp")
 
     if(!$scope.isStatusFormActive){
       refresh();
+    }else{
+        $scope.isLoading = true;
     }
   };
 
@@ -65,11 +68,44 @@ angular.module("dgApp")
           buildBarChart(processedData, response.data.length);
 
           Notification.success({title:'Success', message:'Data loaded.'});
+          $scope.isLoading = false;
         }, function(error){
           Notification.error({title:'Error', message:'Check the console and try again.'});
           console.error('ERROR => ' + JSON.stringify(error.data));
+          $scope.isLoading = false;
         });
   };
+
+  function processData(array, objects,func){
+      var inNative = 0;
+      var noNative = 0;
+      array.map(function(object,index){
+        var item = object.threadName.substring(0,15);
+        if(object.inNative){
+          inNative++;
+        }else{
+          noNative++;
+        }
+        var result = func.apply(this,[objects, item]);
+        if(!result){
+          objects[item] = 1;
+        }else{
+          objects[result] = objects[result] + 1;
+        }
+      })
+      $scope.inNativeQty = inNative;
+      $scope.noNativeQty = noNative;
+      return objects;
+    }
+
+    function existsInList(list, element){
+        for(var i in list){
+          if($utils.levenshteinDistance(i, element)<2){
+            return i;
+          }
+        }
+        return false;
+      }
 
   function buildTableArray(dataArray){
     var objects = [];
@@ -79,38 +115,6 @@ angular.module("dgApp")
     })
     return objects;
   }
-
-  function processData(array, objects,func){
-    var inNative = 0;
-    var noNative = 0;
-    array.map(function(object,index){
-      var item = object.threadName.substring(0,15);
-      if(object.inNative){
-        inNative++;
-      }else{
-        noNative++;
-      }
-      var result = func.apply(this,[objects, item]);
-      if(!result){
-        objects[item] = 1;
-      }else{
-        objects[result] = objects[result] + 1;
-      }
-    })
-    $scope.inNativeQty = inNative;
-    $scope.noNativeQty = noNative;
-    return objects;
-  }
-
-  function existsInList(list, element){
-    for(var i in list){
-      if($utils.levenshteinDistance(i, element)<2){
-        return i;
-      }
-    }
-    return false;
-  }
-
 
 
 function buildBarChart(dataArray, totalThreads){
