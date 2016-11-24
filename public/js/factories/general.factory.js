@@ -3,6 +3,7 @@ angular.module('dgApp')
   var configs = {};
   var amqQueue = {};
   var idMessage = {};
+  var token = {};
 
   var setIdMessage = function(id){
     idMessage = id;
@@ -28,13 +29,23 @@ angular.module('dgApp')
     configs = config;
   };
 
+  var getToken = function(){
+      return token;
+    };
+
+  var setToken = function(token){
+     token = token;
+  };
+
   return{
     getConfig: getConfig,
     setConfigs: setConfigs,
     getAmqQueue: getAmqQueue,
     setAmqQueue: setAmqQueue,
     setIdMessage: setIdMessage,
-    getIdMessage: getIdMessage
+    getIdMessage: getIdMessage,
+    setToken: setToken,
+    getToken: getToken
   }
 })
 

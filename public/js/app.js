@@ -1,7 +1,6 @@
 var app = angular.module('dgApp',['ngRoute', 'ngAnimate', 'ui-notification', 'datatables', 'angular-spinkit', 'ngLodash','chart.js']);
 
-app.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider){
-
+app.config(['$routeProvider', function($routeProvider){
 
   $routeProvider
 .when('/home',{
@@ -69,6 +68,9 @@ app.run(function ($rootScope, $location, $http, $dataDg) {
                   }, function(error){
                     console.error('ERROR GETTING CONFIGS => ' + JSON.stringify(error.data));
                   });
+        }
+        if(angular.equals($dataDg.getToken(), {})){
+
         }
     });
 
