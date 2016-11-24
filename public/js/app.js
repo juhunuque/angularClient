@@ -1,4 +1,4 @@
-var app = angular.module('dgApp',['ngRoute', 'ngAnimate', 'ui-notification', 'datatables', 'angular-spinkit', 'ngLodash','chart.js']);
+var app = angular.module('dgApp',['ngRoute', 'ngAnimate', 'ui-notification', 'datatables', 'angular-spinkit', 'ngLodash','chart.js', 'ngCookies']);
 
 app.config(['$routeProvider', function($routeProvider){
 
@@ -60,7 +60,7 @@ app.config(['$routeProvider', function($routeProvider){
 }
 ]);
 
-app.run(function ($rootScope, $location, $http, $dataDg) {
+app.run(function ($rootScope, $location, $http, $dataDg, $cookies) {
   $rootScope.$on('$routeChangeStart', function(event, next, current) {
         if(angular.equals($dataDg.getConfig(), {})){
             $http.get('/config').then(function(response){
@@ -70,7 +70,7 @@ app.run(function ($rootScope, $location, $http, $dataDg) {
                   });
         }
         if(angular.equals($dataDg.getToken(), {})){
-
+          console.log('JUULIO => ', $cookies.get('JULIO'));
         }
     });
 
